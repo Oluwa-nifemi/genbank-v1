@@ -4,13 +4,14 @@ import Typewriter from "../components/typewriter"
 import backgroundPattern from '../assets/images/home-bg.png'
 import Button from "../components/button"
 import ScrollIndicator from "../components/scroll-indicator"
+import './index.css'
 
 const IndexPage = () => (
   <>
     <Header/>
     <main className='relative'>
       <img src={backgroundPattern} className="absolute w-full top-0 left-0 pointer-events-none" alt="Background pattern" />
-      <section className='pt-28 container flex flex-col items-center h-fill-with-header md-max:pt-12'>
+      <section className='pt-28 container flex flex-col items-center first-section md-max:pt-12'>
         <h1 className='font-plex-serif text-hero font-medium mb-8 w-62% text-white text-center md-max:text-hero-mobile md-max:w-100% md-max:mb-10'>
           Open a US Bank account from <Typewriter/>
         </h1>

@@ -1,0 +1,9 @@
+.first-section{
+  height: calc(100vh - 80px);
+}
+
+@media (max-width: 768px) {
+  .first-section{
+    height: calc(100vh - 180px);
+  }
+}

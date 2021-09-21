@@ -36,9 +36,6 @@ module.exports = {
         '41.25': rem(165),
         '68.75': rem(275)
       },
-      height: {
-        'fill-with-header': 'calc(100vh - 80px)'
-      },
       fontSize: {
         'hero': [rem(64), rem(83)],
         'hero-mobile': [rem(48), rem(62)],
