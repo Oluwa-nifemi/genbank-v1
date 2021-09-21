@@ -19,7 +19,11 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
-    "prettier": "2.4.1"
+    "autoprefixer": "^10.3.4",
+    "gatsby-plugin-postcss": "^4.14.0",
+    "postcss": "^8.3.6",
+    "prettier": "2.4.1",
+    "tailwindcss": "^2.2.15"
   },
   "keywords": [
     "gatsby"
