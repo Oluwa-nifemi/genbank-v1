@@ -94,7 +94,7 @@ const features = [
 const IndexPage = () => (
   <>
     <Header/>
-    <main className='relative'>
+    <main className='relative overflow-hidden'>
       <StaticImage
         placeholder='none'
         loading='eager'

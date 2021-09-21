@@ -4,41 +4,45 @@ import PlayStoreIcon from "../assets/images/play-store.inline.svg"
 import AppleStoreIcon from "../assets/images/apple.inline.svg"
 import ArrowRightAngled from '../assets/images/arrow-angled-right.inline.svg'
 
+const DownloadCard = ({ icon: Icon, topText, destination }) => {
+  return (
+    <div className='py-3 px-4 bg-blue-600 rounded-8 flex items-center w-40'>
+      <Icon/>
+      <p className='text-gray font-plex-hebrew ml-3'>
+        <p className='text-download-from'>
+          {topText}
+        </p>
+        <p className='text-base'>
+          {destination}
+        </p>
+      </p>
+    </div>
+  )
+}
+
 const Footer = () => {
   return (
     <footer className='container py-10 bg-footer-background'>
-      <div className='flex items-start mb-20'>
+      <div className='flex items-start mb-20 flex-wrap lg-max:flex-col lg-max:gap-y-10'>
         <div>
           <LogoIcon className='mb-4'/>
           <p className='text-white font-plex-hebrew text-base mb-10'>
             Bank in US
           </p>
-          <div className='flex items-center'>
-            <div className='mr-8 py-3 px-4 bg-blue-600 rounded-8 flex items-center w-40'>
-              <PlayStoreIcon/>
-              <p className='text-gray font-plex-hebrew ml-3'>
-                <p className='text-download-from'>
-                  GET IT ON
-                </p>
-                <p className='text-base'>
-                  Google Play
-                </p>
-              </p>
-            </div>
-            <div className='p-3 pr-4 bg-blue-600 rounded-8 flex items-center w-40'>
-              <AppleStoreIcon/>
-              <p className='text-gray font-plex-hebrew ml-3'>
-                <p className='text-download-from'>
-                  DOWNLOAD ON
-                </p>
-                <p className='text-base'>
-                  App Store
-                </p>
-              </p>
-            </div>
+          <div className='flex items-center gap-x-8 lg-max:hidden'>
+            <DownloadCard
+              icon={PlayStoreIcon}
+              topText='GET IT ON'
+              destination='Google Play'
+            />
+            <DownloadCard
+              icon={AppleStoreIcon}
+              topText='DOWNLOAD ON'
+              destination='App Store'
+            />
           </div>
         </div>
-        <div className='ml-20% mr-auto'>
+        <div className='ml-16% mr-auto lg-max:mr-0 lg-max:ml-0'>
           <h5 className='text-xl font-light text-white font-plex-hebrew mb-6'>
             Resources
           </h5>
@@ -49,7 +53,7 @@ const Footer = () => {
             Career
           </a>
         </div>
-        <div className='mr-10%'>
+        <div className='mr-10% lg-max:mr-0'>
           <h5 className='text-xl font-light text-white font-plex-hebrew mb-6'>
             Connect with us:
           </h5>
@@ -61,6 +65,18 @@ const Footer = () => {
             Twitter
             <ArrowRightAngled className='inline-flex ml-6'/>
           </a>
+        </div>
+        <div className='flex items-center gap-x-8 lg:hidden'>
+          <DownloadCard
+            icon={PlayStoreIcon}
+            topText='GET IT ON'
+            destination='Google Play'
+          />
+          <DownloadCard
+            icon={AppleStoreIcon}
+            topText='DOWNLOAD ON'
+            destination='App Store'
+          />
         </div>
       </div>
       <div className='text-base text-disclaimer font-plex-hebrew pb-10 border-disclaimer-border border-b mb-10'>
