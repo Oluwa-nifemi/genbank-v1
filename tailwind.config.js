@@ -12,6 +12,7 @@ module.exports = {
   theme: {
     colors: {
       blue: {
+        100: '#CDDFFE',
         200: '#37CCE6',
         300: '#02BBDC',
         400: '#0252DC',
@@ -26,8 +27,11 @@ module.exports = {
       white: '#fff'
     },
     extend: {
-      fontSize: {
-
+      width: {
+        '41.25': rem(165)
+      },
+      opacity: {
+        48: '0.48'
       },
       fontFamily: {
         'plex-serif': ["IBM Plex Serif", 'sans-serif'],
