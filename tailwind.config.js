@@ -53,7 +53,8 @@ module.exports = {
       spacing: {
         ...generatePercentages(),
         'fit-content': 'fit-content',
-        30: rem(120)
+        30: rem(120),
+        'unset': 'unset'
       },
       screens: {
         "lg-max": {
@@ -61,6 +62,9 @@ module.exports = {
         },
         "md-max": {
           max: "768px",
+        },
+        "sm-max": {
+          max: "640px",
         },
       },
     },

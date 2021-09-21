@@ -7,8 +7,42 @@
   line-height: 290px;
 }
 
+@media (max-width: 1024px) {
+  .features{
+    font-size: 9.7rem;
+    line-height: 11.125rem;
+  }
+
+  .whatYouGet{
+    top: unset;
+    bottom: 0;
+    left: 0;
+    right: unset;
+    font-size: 4.375rem;
+    line-height: 6.0625rem;
+  }
+}
+
 @media (max-width: 768px) {
+  .features{
+    font-size: 5.5rem;
+    line-height: 7.125rem;
+  }
+
+  .whatYouGet{
+    font-size: 2.375rem;
+    line-height: 3.0625rem;
+  }
+
   .first-section{
-    height: calc(100vh - 180px);
+    height: calc(100vh - 240px);
+    max-height: 600px;
+  }
+}
+
+@media (max-width: 640px) {
+  .features{
+    font-size: 4.5rem;
+    line-height: 6rem;
   }
 }

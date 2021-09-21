@@ -114,15 +114,15 @@ const IndexPage = () => (
         </div>
       </section>
       <section className='pt-12 container mb-30'>
-        <div className='relative font-plex-serif'>
+        <div className='relative font-plex-serif lg-max:mb-10'>
           <h2 className='text-blue-900 mix-blend-screen opacity-25 features'>
             Features
           </h2>
-          <h4 className='text-blue-300 text-8xl absolute top-24 left-36%'>
+          <h4 className='text-blue-300 text-8xl absolute top-24 left-36% whatYouGet'>
             What you get
           </h4>
         </div>
-        <div className='grid grid-rows-6 grid-cols-3 gap-x-24 gap-y-28'>
+        <div className='grid grid-rows-6 grid-cols-3 gap-x-24 gap-y-28 lg-max:grid-cols-2 lg-max:gap-y-18 lg-max:gap-x-16 sm-max:grid-cols-1 sm-max:gap-y-10'>
           {
             features.map(feature => (
               feature ? (
@@ -137,13 +137,13 @@ const IndexPage = () => (
                     {feature.text}
                   </p>
                 </div>
-              ) : <div/>
+              ) : <div className='lg-max:hidden'/>
             ))
           }
           <StaticImage
             src={'../assets/images/feature-image.png'}
             alt='Features' //TODO: Maybe modify this when the designer changes the image
-            className='row-span-2 col-span-2'
+            className='row-span-2 col-span-2 lg-max:hidden'
           />
         </div>
       </section>
