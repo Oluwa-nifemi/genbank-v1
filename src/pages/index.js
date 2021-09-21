@@ -5,13 +5,98 @@ import backgroundPattern from '../assets/images/home-bg.png'
 import Button from "../components/button"
 import ScrollIndicator from "../components/scroll-indicator"
 import './index.css'
+import { StaticImage } from "gatsby-plugin-image"
+
+const features = [
+  {
+    index: 1,
+    title: 'For Africans — Personal & Business',
+    text: 'Own bank accounts in US dollars, provided by a US bank, FDIC member.'
+  },
+  {
+    index: 2,
+    title: (
+      <span>
+        Checking <br/> Accounts
+      </span>
+    ),
+    text: 'Easy receipts and withdrawals for daily transactions.'
+  },
+  null,
+  null,
+  {
+    index: 3,
+    title: (
+      <span>
+        Savings <br/> Account
+      </span>
+    ),
+    text: 'Interest-bearing accounts with no monthly fees.'
+  },
+  {
+    index: 4,
+    title: (
+      <span>
+        Prepaid Debit <br/> card
+      </span>
+    ),
+    text: 'Use online, in-store, POS, and ATM. Anywhere.'
+  },
+  {
+    index: 5,
+    title: (
+      <span>
+        Cash <br/> Access
+      </span>
+    ),
+    text: 'Deposit or withdraw your cash from ATMs anywhere in the world.'
+  },
+  {
+    index: 6,
+    title: (
+      <span>
+        ACH and Domestic <br/> Wires
+      </span>
+    ),
+    text: 'Same day ACH transactions and wires to US-based accounts.'
+  },
+  null,
+  null,
+  {
+    index: 7,
+    title: (
+      <span>
+        Global <br/> transfers
+      </span>
+    ),
+    text: 'Send next-day transfers to non-US accounts to pay friends, family, or vendors. '
+  },
+  {
+    index: 8,
+    title: (
+      <span>
+        Bill <br/> pay
+      </span>
+    ),
+    text: 'Pay millions of merchants through a Genbank account.'
+  },
+  {
+    index: 9,
+    title: (
+      <span>
+        Security and <br/>safety
+      </span>
+    ),
+    text: 'Security is topmost priority. Deposits are FDIC-insured up to $750,000.'
+  }
+]
 
 const IndexPage = () => (
   <>
     <Header/>
     <main className='relative'>
       <img src={backgroundPattern} className="absolute w-full top-0 left-0 pointer-events-none" alt="Background pattern" />
-      <section className='pt-28 container flex flex-col items-center first-section md-max:pt-12'>
+      <section className='pt-28 container flex flex-col items-center first-section md-max:pt-12 relative'>
         <h1 className='font-plex-serif text-hero font-medium mb-8 w-62% text-white text-center md-max:text-hero-mobile md-max:w-100% md-max:mb-10'>
           Open a US Bank account from <Typewriter/>
         </h1>
@@ -26,6 +111,40 @@ const IndexPage = () => (
         </Button>
         <div className='absolute right-30 bottom-4 md-max:hidden'>
           <ScrollIndicator/>
+        </div>
+      </section>
+      <section className='pt-12 container mb-30'>
+        <div className='relative font-plex-serif'>
+          <h2 className='text-blue-900 mix-blend-screen opacity-25 features'>
+            Features
+          </h2>
+          <h4 className='text-blue-300 text-8xl absolute top-24 left-36%'>
+            What you get
+          </h4>
+        </div>
+        <div className='grid grid-rows-6 grid-cols-3 gap-x-24 gap-y-28'>
+          {
+            features.map(feature => (
+              feature ? (
+                <div className='text-white font-plex-hebrew'>
+                  <h4 className='text-2xl mb-6'>
+                    0{feature.index}/
+                  </h4>
+                  <h5 className='text-feature-title mb-12'>
+                    {feature.title}
+                  </h5>
+                  <p className='text-xl'>
+                    {feature.text}
+                  </p>
+                </div>
+              ) : <div/>
+            ))
+          }
+          <StaticImage
+            src={'../assets/images/feature-image.png'}
+            alt='Features' //TODO: Maybe modify this when the designer changes the image
+            className='row-span-2 col-span-2'
+          />
         </div>
       </section>
     </main>

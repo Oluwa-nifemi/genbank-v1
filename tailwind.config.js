@@ -40,6 +40,7 @@ module.exports = {
         'hero': [rem(64), rem(83)],
         'hero-mobile': [rem(48), rem(62)],
         'description': [rem(20), rem(26)],
+        'feature-title': [rem(34), rem(44)],
       },
       opacity: {
         48: '0.48',

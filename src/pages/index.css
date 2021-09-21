@@ -2,6 +2,11 @@
   height: calc(100vh - 80px);
 }
 
+.features{
+  font-size: 290px;
+  line-height: 290px;
+}
+
 @media (max-width: 768px) {
   .first-section{
     height: calc(100vh - 180px);
