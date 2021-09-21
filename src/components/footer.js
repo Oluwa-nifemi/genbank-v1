@@ -66,7 +66,7 @@ const Footer = () => {
             <ArrowRightAngled className='inline-flex ml-6'/>
           </a>
         </div>
-        <div className='flex items-center gap-x-8 lg:hidden'>
+        <div className='flex items-center gap-x-4 lg:hidden'>
           <DownloadCard
             icon={PlayStoreIcon}
             topText='GET IT ON'

@@ -134,7 +134,7 @@ const IndexPage = () => (
           </div>
         </div>
         <div
-          className="grid grid-rows-6 grid-cols-3 gap-x-24 gap-y-28 lg-max:grid-cols-2 lg-max:gap-y-18 lg-max:gap-x-16 sm-max:grid-cols-1 sm-max:gap-y-10">
+          className="grid grid-rows-6 grid-cols-3 gap-x-24 gap-y-28 lg-max:grid-cols-2 lg-max:gap-y-18 lg-max:gap-x-16 lg-max:grid-rows-5 sm-max:flex sm-max:flex-col sm-max:gap-y-10">
           {
             features.map(feature => (
               feature ? (
