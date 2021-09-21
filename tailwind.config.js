@@ -28,6 +28,9 @@ module.exports = {
       black: '#000'
     },
     extend: {
+      maxWidth: {
+        '100%': '100%'
+      },
       borderRadius: {
         10: rem(40),
         half: '50%',
@@ -41,7 +44,6 @@ module.exports = {
         'hero-mobile': [rem(48), rem(62)],
         'description': [rem(20), rem(26)],
         'feature-title': [rem(34), rem(44)],
-        'stay-ahead': [rem(72), rem(94)],
       },
       opacity: {
         48: '0.48',

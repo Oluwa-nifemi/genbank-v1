@@ -155,9 +155,9 @@ const IndexPage = () => (
           />
         </div>
       </section>
-      <section className='py-30 container'>
-        <div className='px-30 py-22.5 flex justify-between items-center bg-blue-500 rounded-2xl relative overflow-hidden'>
-          <h1 className='text-stay-ahead text-white font-plex-hebrew z-10'>
+      <section className='py-30 container md-max:py-20'>
+        <div className='px-30 py-22.5 flex justify-between items-center bg-blue-500 rounded-2xl relative overflow-hidden md-max:flex-col md-max:py-10 md-max:px-6 md-max:items-start'>
+          <h1 className='stayAhead text-white font-plex-hebrew z-10 md-max:mb-20'>
             Stay <br/> ahead!
           </h1>
           <Button
@@ -170,7 +170,14 @@ const IndexPage = () => (
           <StaticImage
             src={'../assets/images/stay-ahead.png'}
             alt='Stay ahead background'
-            className='absolute top-0 left-0 transform'
+            className='absolute top-0 left-0 transform md-max:hidden'
+            placeholder='none'
+          />
+          <StaticImage
+            src={'../assets/images/stay-ahead-mobile.png'}
+            alt='Stay ahead background mobile'
+            className='absolute bottom-0 left-0 transform md:hidden'
+            placeholder='none'
           />
         </div>
       </section>

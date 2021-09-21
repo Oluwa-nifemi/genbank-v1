@@ -7,6 +7,11 @@
   line-height: 290px;
 }
 
+.stayAhead{
+  font-size: 4.5rem;
+  line-height: 5.875rem;
+}
+
 @media (max-width: 1024px) {
   .features{
     font-size: 9.7rem;
@@ -37,6 +42,11 @@
   .first-section{
     height: calc(100vh - 240px);
     max-height: 600px;
+  }
+
+  .stayAhead{
+    font-size: 3.375rem;
+    line-height: 4.375rem;
   }
 }
 

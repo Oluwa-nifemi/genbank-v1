@@ -10,7 +10,7 @@ const Button = ({ children, className, elevated, hasWhiteBackground  }) => {
   }
 
   return (
-    <button className={classNames('px-4 relative py-3 text-base font-plex-hebrew flex items-center justify-between md-max:text-sm', colorsClasses.button, className)}>
+    <button className={classNames('px-4 relative py-3 text-base font-plex-hebrew flex items-center justify-between md-max:text-sm max-w-100%', colorsClasses.button, className)}>
       {children}
       <ArrowRight className={classNames('md-max:w-4 md-max:h-4', colorsClasses.arrow)}/>
       {
