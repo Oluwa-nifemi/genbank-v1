@@ -3,3 +3,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply bg-blue-1000
+}
+
+.container {
+  padding-left: 120px;
+  padding-right: 120px;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}

@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 
 const Header = () => {
   return (
-    <header className='px-8% h-20 flex justify-between items-center bg-blue-1000 bg-opacity-481'>
+    <header className='container h-20 flex justify-between items-center bg-blue-1000 bg-opacity-481'>
       <Link to='./'>
         <LogoIcon/>
       </Link>
