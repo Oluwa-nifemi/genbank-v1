@@ -94,7 +94,13 @@ const IndexPage = () => (
   <>
     <Header/>
     <main className='relative'>
-      <StaticImage placeholder='none' loading='eager' src='../assets/images/home-bg.png' className="absolute w-full top-0 left-0 pointer-events-none md-max:hidden" alt="Background pattern" />
+      <StaticImage
+        placeholder='none'
+        loading='eager'
+        src='../assets/images/home-bg.png'
+        className="absolute w-full top-0 left-0 pointer-events-none md-max:hidden"
+        alt="Background pattern"
+      />
       <section className='pt-28 container flex flex-col items-center first-section md-max:pt-12 relative'>
         <h1 className='font-plex-serif text-hero font-medium mb-8 w-62% text-white text-center md-max:text-hero-mobile md-max:w-100% md-max:mb-10'>
           Open a US Bank account from <Typewriter/>
@@ -146,6 +152,25 @@ const IndexPage = () => (
             src={'../assets/images/feature-image.png'}
             alt='Features' //TODO: Maybe modify this when the designer changes the image
             className='row-span-2 col-span-2 lg-max:hidden'
+          />
+        </div>
+      </section>
+      <section className='py-30 container'>
+        <div className='px-30 py-22.5 flex justify-between items-center bg-blue-500 rounded-2xl relative overflow-hidden'>
+          <h1 className='text-stay-ahead text-white font-plex-hebrew z-10'>
+            Stay <br/> ahead!
+          </h1>
+          <Button
+            hasWhiteBackground
+            className='w-68.75 z-10'
+            elevated
+          >
+            Pre-qualify
+          </Button>
+          <StaticImage
+            src={'../assets/images/stay-ahead.png'}
+            alt='Stay ahead background'
+            className='absolute top-0 left-0 transform'
           />
         </div>
       </section>

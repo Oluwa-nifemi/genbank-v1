@@ -41,6 +41,7 @@ module.exports = {
         'hero-mobile': [rem(48), rem(62)],
         'description': [rem(20), rem(26)],
         'feature-title': [rem(34), rem(44)],
+        'stay-ahead': [rem(72), rem(94)],
       },
       opacity: {
         48: '0.48',
@@ -54,7 +55,11 @@ module.exports = {
         ...generatePercentages(),
         'fit-content': 'fit-content',
         30: rem(120),
+        '22.5': rem(90),
         'unset': 'unset'
+      },
+      zIndex: {
+        '-1': '-1'
       },
       screens: {
         "lg-max": {
