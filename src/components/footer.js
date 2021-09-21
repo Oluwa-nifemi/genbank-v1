@@ -46,10 +46,10 @@ const Footer = () => {
           <h5 className='text-xl font-light text-white font-plex-hebrew mb-6'>
             Resources
           </h5>
-          <a className='text-xl text-white font-plex-hebrew mb-4 block'>
+          <a href="https://www.google.com" target='_blank' rel='noreferrer' className='text-xl text-white font-plex-hebrew mb-4 block'>
             News
           </a>
-          <a className='text-xl text-white font-plex-hebrew block'>
+          <a href="https://www.google.com" target='_blank' rel='noreferrer' className='text-xl text-white font-plex-hebrew block'>
             Career
           </a>
         </div>
@@ -57,11 +57,11 @@ const Footer = () => {
           <h5 className='text-xl font-light text-white font-plex-hebrew mb-6'>
             Connect with us:
           </h5>
-          <a className='text-xl text-white font-plex-hebrew mb-4 block'>
+          <a href="https://www.google.com" target='_blank' rel='noreferrer' className='text-xl text-white font-plex-hebrew mb-4 block'>
             Linkedin
             <ArrowRightAngled className='inline-flex ml-6'/>
           </a>
-          <a className='text-xl text-white font-plex-hebrew block'>
+          <a href="https://www.google.com" target='_blank' rel='noreferrer' className='text-xl text-white font-plex-hebrew block'>
             Twitter
             <ArrowRightAngled className='inline-flex ml-6'/>
           </a>
