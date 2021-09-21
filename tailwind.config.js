@@ -24,14 +24,28 @@ module.exports = {
         1000: '#000e25',
         disclaimer: '#343941'
       },
-      white: '#fff'
+      white: '#fff',
+      black: '#000'
     },
     extend: {
+      borderRadius: {
+        10: rem(40),
+        half: '50%',
+      },
       width: {
-        '41.25': rem(165)
+        '41.25': rem(165),
+        '68.75': rem(275)
+      },
+      height: {
+        'fill-with-header': 'calc(100vh - 80px)'
+      },
+      fontSize: {
+        'hero-text': [rem(64), rem(83)],
+        'description': [rem(20), rem(26)],
       },
       opacity: {
-        48: '0.48'
+        48: '0.48',
+        12: '0.12'
       },
       fontFamily: {
         'plex-serif': ["IBM Plex Serif", 'sans-serif'],
@@ -39,7 +53,8 @@ module.exports = {
       },
       spacing: {
         ...generatePercentages(),
-        'fit-content': 'fit-content'
+        'fit-content': 'fit-content',
+        30: rem(120)
       },
     },
   },
