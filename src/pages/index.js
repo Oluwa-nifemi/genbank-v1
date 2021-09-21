@@ -5,6 +5,7 @@ import Button from "../components/button"
 import ScrollIndicator from "../components/scroll-indicator"
 import './index.css'
 import { StaticImage } from "gatsby-plugin-image"
+import Footer from "../components/footer"
 
 const features = [
   {
@@ -152,6 +153,7 @@ const IndexPage = () => (
             src={'../assets/images/feature-image.png'}
             alt='Features' //TODO: Maybe modify this when the designer changes the image
             className='row-span-2 col-span-2 lg-max:hidden'
+            placeholder='none'
           />
         </div>
       </section>
@@ -181,6 +183,7 @@ const IndexPage = () => (
           />
         </div>
       </section>
+      <Footer/>
     </main>
   </>
 )

@@ -22,10 +22,13 @@ module.exports = {
         800: '#273245',
         900: '#0A2E34',
         1000: '#000e25',
-        disclaimer: '#343941'
+        'footer-background': '#03122C'
       },
+      disclaimer: '#343941',
+      'disclaimer-border': '#40516E',
       white: '#fff',
-      black: '#000'
+      black: '#000',
+      gray: '#EDF3EF'
     },
     extend: {
       maxWidth: {
@@ -33,6 +36,7 @@ module.exports = {
       },
       borderRadius: {
         10: rem(40),
+        8: rem(32),
         half: '50%',
       },
       width: {
@@ -44,6 +48,7 @@ module.exports = {
         'hero-mobile': [rem(48), rem(62)],
         'description': [rem(20), rem(26)],
         'feature-title': [rem(34), rem(44)],
+        'download-from': [rem(8), rem(10)],
       },
       opacity: {
         48: '0.48',
