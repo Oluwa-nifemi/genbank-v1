@@ -40,7 +40,8 @@ module.exports = {
         'fill-with-header': 'calc(100vh - 80px)'
       },
       fontSize: {
-        'hero-text': [rem(64), rem(83)],
+        'hero': [rem(64), rem(83)],
+        'hero-mobile': [rem(48), rem(62)],
         'description': [rem(20), rem(26)],
       },
       opacity: {
@@ -55,6 +56,14 @@ module.exports = {
         ...generatePercentages(),
         'fit-content': 'fit-content',
         30: rem(120)
+      },
+      screens: {
+        "lg-max": {
+          max: "1024px",
+        },
+        "md-max": {
+          max: "768px",
+        },
       },
     },
   },

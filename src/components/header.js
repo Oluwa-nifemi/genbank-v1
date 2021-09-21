@@ -9,7 +9,7 @@ const Header = () => {
       <Link to='./'>
         <LogoIcon/>
       </Link>
-      <Button className='w-41.25'>
+      <Button className='w-41.25 md-max:w-36'>
         Pre-qualify
       </Button>
     </header>
