@@ -11,11 +11,17 @@ const ScrollIndicator = () => {
   }
 
   return (
-    <button onClick={onScroll} className='bg-white backdrop-filter backdrop-blur-sm w-24 h-24 bg-opacity-12 rounded-half flex flex-col items-center justify-center border-none'>
-      <span className='text-base text-white font-plex-hebrew mb-1 w-11'>
+    <button
+      onClick={onScroll}
+      className={`
+        bg-white backdrop-filter backdrop-blur-sm w-24 h-24 bg-opacity-12 rounded-half flex flex-col items-center justify-center border-none
+        md-max:w-20 md-max:h-20
+      `}
+    >
+      <span className='text-base text-white font-plex-hebrew mb-1 w-11 md-max:text-sm'>
         Scroll down
       </span>
-      <ArrowDown/>
+      <ArrowDown className='md-max:w-3'/>
     </button>
   )
 }
