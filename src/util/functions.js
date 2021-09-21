@@ -1,0 +1,1 @@
+export const classNames = (...cls) => cls.filter(cls => !!cls).join(' ');
