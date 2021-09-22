@@ -87,6 +87,7 @@ module.exports = {
       backgroundColor: ["disabled"],
       cursor: ["disabled"],
       textColor: ["disabled", 'active'],
+      transform: ['hover', 'focus']
     },
   },
   plugins: [],
