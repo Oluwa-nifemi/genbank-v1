@@ -28,20 +28,21 @@ const Checkbox = (
       <label
         htmlFor={id}
         className={classNames("flex w-4.5 h-4.5 cursor-pointer box-border border-2 rounded-sm border-white duration-150", checked && "bg-white")}
-      />
+      >
+        <input
+          id={id}
+          type="checkbox"
+          checked={checked}
+          onChange={onChange}
+          className="hidden"
+          name={name}
+        />
+      </label>
       <CheckedIcon
         className={classNames(
           "pointer-events-none absolute left-0 text-blue-500 fill-current opacity-0 duration-150",
           checked && "opacity-100"
         )}
-      />
-      <input
-        id={id}
-        type="checkbox"
-        checked={checked}
-        onChange={onChange}
-        className="hidden"
-        name={name}
       />
       {label && (
         <span
