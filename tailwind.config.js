@@ -11,6 +11,7 @@ module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     colors: {
+      transparent: 'transparent',
       blue: {
         100: '#CDDFFE',
         200: '#37CCE6',
@@ -56,7 +57,6 @@ module.exports = {
         'description': [rem(20), rem(26)],
         'feature-title': [rem(34), rem(44)],
         'download-from': [rem(8), rem(10)],
-        'form-header': [rem(38), rem(49)],
       },
       opacity: {
         48: '0.48',

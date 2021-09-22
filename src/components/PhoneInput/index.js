@@ -87,14 +87,14 @@ const PhoneNoInput = ({ value, onChange, label, id }) => {
       <label className="text-lg text-white font-plex-hebrew mb-3 flex" htmlFor={id}>
         {label}
       </label>
-      <div className="bg-blue-800 flex items-center px-4 relative">
+      <div className="bg-blue-800 flex items-center px-4 relative flex-wrap md-max:flex-nowrap border border-transparent focus-within:border-blue-200">
         <CountryDropdown
           value={value.country}
           onChange={onChangeCountry}
         />
-        <span className="h-14 border-l border-blue-phone-input-border flex ml-5 mr-4" />
+        <span className="h-14 border-l border-blue-phone-input-border flex ml-5 mr-4 md-max:mx-2.5 md-max:h-10" />
         <input
-          className="h-18 flex items-center text-lg font-plex-hebrew flex-grow bg-blue-800 text-white border-none outline-none focus:outline-none"
+          className="h-18 flex items-center text-lg font-plex-hebrew flex-grow bg-blue-800 text-white border-none outline-none focus:outline-none md-max:h-14 w-100%"
           id={id}
           value={value.number}
           onChange={onChangeInput}

@@ -1,0 +1,11 @@
+.formHeader{
+  font-size: 38px;
+  line-height: 49px;
+}
+
+@media (max-width: 768px) {
+  .formHeader{
+    font-size: 26px;
+    line-height: 33.8px;
+  }
+}

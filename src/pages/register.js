@@ -7,11 +7,12 @@ import Checkbox from "../components/checkbox"
 import Button from "../components/button"
 import PhoneNoInput from "../components/PhoneInput"
 import countriesWithISO from "../util/phoneInputData"
+import './register.css'
 
 const Register = () => {
   const [agree, setAgree] = useState(false)
   const [phoneNumber, setPhoneNumber] = useState({
-    country: countriesWithISO[0] //TODO: Default to +1
+    country: countriesWithISO[2] //TODO: Default to +1
   })
 
   const toggleAgree = () => {
@@ -21,7 +22,7 @@ const Register = () => {
   return (
     <>
       <Header hasBackButton />
-      <main className="relative overflow-hidden pb-56">
+      <main className="relative overflow-hidden pb-56 md-max:pb-40">
         <div className="absolute w-full top-0 left-0 pointer-events-none md-max:hidden">
           <StaticImage
             placeholder="none"
@@ -30,11 +31,11 @@ const Register = () => {
             alt="Background pattern"
           />
         </div>
-        <section className="pt-28 flex flex-col items-center">
-          <h1 className="text-form-header text-white font-plex-serif mb-8">
+        <section className="pt-28 flex flex-col items-center md-max:pt-12">
+          <h1 className="formHeader text-white font-plex-serif mb-8">
             Pre-qualification form
           </h1>
-          <div className="grid grid-cols-2 gap-x-8 gap-y-10 mb-10 w-55%">
+          <div className="grid grid-cols-2 gap-x-8 gap-y-10 mb-10 w-55% lg-max:w-80% md-max:w-100% md-max:px-6 md-max:grid-cols-1 md-max:gap-x-6">
             <Input
               label="First Name"
               name="first-name"
@@ -54,7 +55,7 @@ const Register = () => {
               name="email"
             />
           </div>
-          <div className="w-55%">
+          <div className="w-55% lg-max:w-80% md-max:w-100% md-max:px-6">
             <Checkbox
               id="agree"
               onChange={toggleAgree}
@@ -63,7 +64,7 @@ const Register = () => {
               label="By signing up, I agree to Genbank Financial, LLC’s Terms and Condition."
             />
           </div>
-          <div className="mt-20">
+          <div className="mt-20 md-max:mt-12">
             <Button elevated className="w-68.75">
               Pre-qualify
             </Button>
