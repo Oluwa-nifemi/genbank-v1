@@ -8,14 +8,14 @@ const DownloadCard = ({ icon: Icon, topText, destination }) => {
   return (
     <div className='py-3 px-4 bg-blue-600 rounded-8 flex items-center w-40'>
       <Icon/>
-      <p className='text-gray font-plex-hebrew ml-3'>
+      <div className='text-gray font-plex-hebrew ml-3'>
         <p className='text-download-from'>
           {topText}
         </p>
         <p className='text-base'>
           {destination}
         </p>
-      </p>
+      </div>
     </div>
   )
 }
