@@ -4,6 +4,7 @@ import DownIcon from "../../assets/images/down.inline.svg"
 import Flags from "country-flag-icons/react/3x2"
 import countriesWithISO from "../../util/phoneInputData"
 import { classNames } from "../../util/functions"
+import { AsYouType }  from 'libphonenumber-js'
 
 const Option = ({ children, onClick, flag: Flag }) => (
   <button
@@ -64,9 +65,20 @@ const CountryDropdown = ({ value, onChange }) => {
 
 const PhoneNoInput = ({ value, onChange, label, id }) => {
   const onChangeCountry = (newCountry) => {
+    const convertedNumber =  new AsYouType(newCountry.countryCode).input(value.number);
+
     onChange({
-      number: value.number,
+      number: convertedNumber,
       country: newCountry
+    })
+  }
+
+  const onChangeInput = ({target}) => {
+    const convertedNumber =  new AsYouType(value.country.countryCode).input(target.value);
+
+    onChange({
+      ...value,
+      number: convertedNumber
     })
   }
 
@@ -84,6 +96,8 @@ const PhoneNoInput = ({ value, onChange, label, id }) => {
         <input
           className="h-18 flex items-center text-lg font-plex-hebrew flex-grow bg-blue-800 text-white border-none outline-none focus:outline-none"
           id={id}
+          value={value.number}
+          onChange={onChangeInput}
         />
       </div>
     </div>

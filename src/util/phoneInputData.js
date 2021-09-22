@@ -1229,6 +1229,6 @@ const countriesWithISO = [
     ISO: "+263",
     countryCode: "ZW",
   },
-]
+].sort((countryA, countryB) => parseInt(countryA.ISO) - parseInt(countryB.ISO))
 
 export default countriesWithISO

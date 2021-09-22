@@ -47,7 +47,7 @@ const Register = () => {
               label="Phone number"
               value={phoneNumber}
               onChange={setPhoneNumber}
-              id={phoneNumber}
+              id='phoneNumber'
             />
             <Input
               label="Email address"
