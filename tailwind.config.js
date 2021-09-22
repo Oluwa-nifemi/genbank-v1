@@ -42,7 +42,12 @@ module.exports = {
       },
       width: {
         '41.25': rem(165),
-        '68.75': rem(275)
+        '68.75': rem(275),
+        '4.5': rem(18)
+      },
+      height: {
+        18: rem(72),
+        '4.5': rem(18)
       },
       fontSize: {
         'hero': [rem(64), rem(83)],
@@ -50,6 +55,7 @@ module.exports = {
         'description': [rem(20), rem(26)],
         'feature-title': [rem(34), rem(44)],
         'download-from': [rem(8), rem(10)],
+        'form-header': [rem(38), rem(49)],
       },
       opacity: {
         48: '0.48',
