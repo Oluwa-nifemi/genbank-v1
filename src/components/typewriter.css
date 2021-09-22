@@ -1,0 +1,13 @@
+.blinking-cursor{
+  animation: 1s blink step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100%{
+    border-color: white;
+  }
+
+  50%{
+    border-color: transparent;
+  }
+}
