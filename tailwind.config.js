@@ -23,13 +23,14 @@ module.exports = {
         900: '#0A2E34',
         1000: '#000e25',
         'footer-background': '#03122C',
-        'close-button': '#BDD4FB'
+        'close-button': '#BDD4FB',
+        'phone-input-border': '#35445D',
       },
       disclaimer: '#343941',
       'disclaimer-border': '#40516E',
       white: '#fff',
       black: '#000',
-      gray: '#EDF3EF'
+      gray: '#EDF3EF',
     },
     extend: {
       maxWidth: {

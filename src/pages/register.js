@@ -5,9 +5,14 @@ import { StaticImage } from "gatsby-plugin-image"
 import Input from "../components/input"
 import Checkbox from "../components/checkbox"
 import Button from "../components/button"
+import PhoneNoInput from "../components/PhoneInput"
+import countriesWithISO from "../util/phoneInputData"
 
 const Register = () => {
   const [agree, setAgree] = useState(false)
+  const [phoneNumber, setPhoneNumber] = useState({
+    country: countriesWithISO[0] //TODO: Default to +1
+  })
 
   const toggleAgree = () => {
     setAgree(prevState => !prevState)
@@ -38,9 +43,11 @@ const Register = () => {
               label="Last name"
               name="last-name"
             />
-            <Input
+            <PhoneNoInput
               label="Phone number"
-              name="number"
+              value={phoneNumber}
+              onChange={setPhoneNumber}
+              id={phoneNumber}
             />
             <Input
               label="Email address"
