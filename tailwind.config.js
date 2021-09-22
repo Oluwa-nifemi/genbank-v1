@@ -22,7 +22,8 @@ module.exports = {
         800: '#273245',
         900: '#0A2E34',
         1000: '#000e25',
-        'footer-background': '#03122C'
+        'footer-background': '#03122C',
+        'close-button': '#BDD4FB'
       },
       disclaimer: '#343941',
       'disclaimer-border': '#40516E',
@@ -52,7 +53,8 @@ module.exports = {
       },
       opacity: {
         48: '0.48',
-        12: '0.12'
+        12: '0.12',
+        15: '0.15',
       },
       fontFamily: {
         'plex-serif': ["IBM Plex Serif", 'sans-serif'],
