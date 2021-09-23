@@ -180,7 +180,7 @@ const IndexPage = () => {
             >
               Pre-qualify
             </Button>
-            <div className="absolute top-0 left-0 transform md-max:hidden">
+            <div className="absolute bottom-0 left-0 transform md-max:hidden">
               <StaticImage
                 src={"../assets/images/stay-ahead.png"}
                 alt="Stay ahead background"
