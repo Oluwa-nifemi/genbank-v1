@@ -7,6 +7,7 @@
   "dependencies": {
     "axios": "^0.21.4",
     "country-flag-icons": "^1.4.10",
+    "emailjs-com": "^3.2.0",
     "gatsby": "^3.13.1",
     "gatsby-plugin-image": "^1.13.0",
     "gatsby-plugin-manifest": "^3.13.0",

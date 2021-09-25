@@ -13,6 +13,7 @@ import successAnimation from "../assets/animations/success-form.json"
 import { Link } from "gatsby"
 import Seo from "../components/seo"
 import { postData } from "../api/api"
+import emailjs from "emailjs-com"
 
 const defaultOptions = {
   loop: false,
@@ -84,7 +85,20 @@ const Register = () => {
       formData.number = extractPhoneNumber(formValues.number)
 
       await postData(formData)
-      setFormState(formStates.IDLE)
+
+      emailjs.init(process.env.GATSBY_EMAILJS_USERID)
+
+      await emailjs.send(
+        process.env.GATSBY_EMAILJS_SERVICEID,
+        process.env.GATSBY_EMAILJS_TEMPLATEID,
+        {
+          to_email: formData.email,
+          name: formData.firstName,
+          full_name: `${formData.firstName} ${formData.lastName}`,
+        }
+      )
+
+      setFormState(formStates.SUCCESS)
 
       window.scrollTo({
         top: 0,
