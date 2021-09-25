@@ -2,29 +2,24 @@ import React from "react"
 import ArrowRight from "../../assets/images/arrow-right.inline.svg"
 import { classNames } from "../../util/functions"
 import './button.scss'
+import { PulseLoader } from "react-spinners"
 
-const Button = ({ children, className, elevated, hasWhiteBackground, onClick, largeButton = true }) => {
+const Button = ({ children, className, elevated, hasWhiteBackground, onClick, largeButton = true, loading }) => {
   const colorsClasses = {
     button: hasWhiteBackground ? "text-blue-400 bg-white white-button" : "text-blue-100 bg-blue-400",
     arrow: hasWhiteBackground ? "text-blue-400" : "text-white",
     elevation: hasWhiteBackground ? "border-white group-hover:border-blue-400" : "border-blue-400 group-hover:border-white"
   }
 
-  return (
-    <div className="relative group">
-      <button
-        className={
-          classNames(
-            "px-4 cursor-pointer font-plex-hebrew flex items-center md-max:text-sm max-w-100% action-button",
-            elevated && "focus:transform focus:translate-x-1 focus:translate-y-1 z-10 relative duration-150",
-            largeButton ? "py-4.75" : "py-3.5 md-max:py-3",
-            colorsClasses.button,
-            className
-          )
-        }
-        onClick={onClick}
-      >
-        <span className='text-wrapper'>
+  const renderContent = () => {
+    if(loading){
+      return (
+        <PulseLoader size={10} color='#02BBDC'/>
+      )
+    }
+
+    return (
+      <span className='text-wrapper'>
           <span className={
             classNames(
               largeButton ? "text-description" : "text-base md-max:text-sm leading-5 h-5",
@@ -35,6 +30,27 @@ const Button = ({ children, className, elevated, hasWhiteBackground, onClick, la
             <ArrowRight className={classNames("md-max:w-4 md-max:h-4 icon", colorsClasses.arrow)} />
           </span>
         </span>
+    )
+  }
+
+  return (
+    <div className="relative group">
+      <button
+        className={
+          classNames(
+            "px-4 cursor-pointer font-plex-hebrew flex items-center justify-center md-max:text-sm max-w-100% action-button",
+            "disabled:bg-blue-800 disabled:cursor-not-allowed",
+            elevated && "focus:transform focus:translate-x-1 focus:translate-y-1 z-10 relative duration-150",
+            loading && "transform translate-x-1 translate-y-1 z-10 relative duration-150",
+            largeButton ? "py-4.75" : "py-3.5 md-max:py-3",
+            colorsClasses.button,
+            className
+          )
+        }
+        disabled={loading}
+        onClick={onClick}
+      >
+        {renderContent()}
       </button>
       {
         elevated && (
