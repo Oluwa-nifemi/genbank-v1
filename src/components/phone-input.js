@@ -1,6 +1,6 @@
 import React from "react"
 
-const Input = ({ label, value, onChange, id }) => {
+const PhoneInput = ({ label, value, onChange, id }) => {
   return (
     <div>
       <label className='text-lg text-white font-plex-hebrew mb-3 flex' htmlFor={id}>
@@ -17,4 +17,4 @@ const Input = ({ label, value, onChange, id }) => {
   )
 }
 
-export default Input
+export default PhoneInput

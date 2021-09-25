@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import Footer from "../components/footer/footer"
 import Header from "../components/header"
 import { StaticImage } from "gatsby-plugin-image"
-import Input from "../components/input"
+import PhoneInput from "../components/phone-input"
 import Checkbox from "../components/checkbox"
 import Button from "../components/button/button"
 import PhoneNoInput from "../components"
@@ -90,14 +90,14 @@ const Register = () => {
         </h1>
         <div
           className="grid grid-cols-2 gap-x-8 gap-y-10 mb-10 w-55% lg-max:w-80% md-max:w-100% md-max:px-6 md-max:grid-cols-1 md-max:gap-x-6">
-          <Input
+          <PhoneInput
             label="First Name"
             name="first-name"
             id="First Name"
             onChange={onInputChange}
             value={formValues["First Name"]}
           />
-          <Input
+          <PhoneInput
             label="Last name"
             name="last-name"
             id="Last Name"
@@ -110,7 +110,7 @@ const Register = () => {
             onChange={setPhoneNumber}
             id="phoneNumber"
           />
-          <Input
+          <PhoneInput
             label="Email address"
             name="email"
             id="Email"
