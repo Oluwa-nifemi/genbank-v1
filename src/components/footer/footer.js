@@ -1,8 +1,8 @@
 import React from "react"
-import LogoIcon from "../assets/images/logo.inline.svg"
-import PlayStoreIcon from "../assets/images/play-store.inline.svg"
-import AppleStoreIcon from "../assets/images/apple.inline.svg"
-import ArrowRightAngled from '../assets/images/arrow-angled-right.inline.svg'
+import LogoIcon from "../../assets/images/logo.inline.svg"
+import PlayStoreIcon from "../../assets/images/play-store.inline.svg"
+import AppleStoreIcon from "../../assets/images/apple.inline.svg"
+import ArrowRightAngled from '../../assets/images/arrow-angled-right.inline.svg'
 import './footer.css'
 
 const DownloadCard = ({ icon: Icon, topText, destination }) => {

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react"
 import './typewriter.css'
-import { classNames } from "../util/functions"
+import { classNames } from "../../util/functions"
 
 const options = [
   'Nigeria',

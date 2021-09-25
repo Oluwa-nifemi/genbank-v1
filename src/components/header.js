@@ -1,6 +1,6 @@
 import React from "react"
 import LogoIcon from "../assets/images/logo.inline.svg"
-import Button from "./button"
+import Button from "./button/button"
 import { Link, navigate } from "gatsby"
 import CloseIcon from '../assets/images/close.inline.svg'
 

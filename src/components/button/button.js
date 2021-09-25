@@ -1,6 +1,6 @@
 import React from "react"
-import ArrowRight from "../assets/images/arrow-right.inline.svg"
-import { classNames } from "../util/functions"
+import ArrowRight from "../../assets/images/arrow-right.inline.svg"
+import { classNames } from "../../util/functions"
 import './button.scss'
 
 const Button = ({ children, className, elevated, hasWhiteBackground, onClick, largeButton = true }) => {

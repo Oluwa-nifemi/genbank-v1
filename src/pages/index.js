@@ -1,11 +1,11 @@
 import * as React from "react"
 import Header from "../components/header"
-import Typewriter from "../components/typewriter"
-import Button from "../components/button"
+import Typewriter from "../components/typewriter/typewriter"
+import Button from "../components/button/button"
 import ScrollIndicator from "../components/scroll-indicator"
 import "./index.css"
 import { StaticImage } from "gatsby-plugin-image"
-import Footer from "../components/footer"
+import Footer from "../components/footer/footer"
 import { navigate } from "gatsby"
 
 const features = [
