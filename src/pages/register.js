@@ -27,7 +27,7 @@ const Register = () => {
     "First Name": "",
     "Last Name": "",
     "Phone Number": {
-      country: countriesWithISO[2],
+      country: countriesWithISO[0],
       number: ""
     },
     "Email": ""
