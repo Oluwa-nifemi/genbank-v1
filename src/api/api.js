@@ -1,8 +1,8 @@
 import axios from "axios"
 
-const postData = async (formData) => {
+export const postData = async (formData) => {
   await axios.get(
-    "https://script.google.com/macros/s/AKfycbxTxbJwUwJoaPR_SqGl6du7g2XiWLxmBXL6poljtfFLSz_bLgxQe6uceLuUOFixEf02/exec",
+    "https://script.google.com/macros/s/AKfycbwdrS2O4FOvSIlQVwlOscqwaDzdeM2Rk8TrzERgpK73iwWZk7dFAmmTCquzM_kNpC0R/exec",
     {
       params: formData
     }

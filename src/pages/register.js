@@ -12,6 +12,7 @@ import Lottie from "react-lottie"
 import successAnimation from "../assets/animations/success-form.json"
 import { Link } from "gatsby"
 import Seo from "../components/seo"
+import { postData } from "../api/api"
 
 const defaultOptions = {
   loop: false,
@@ -22,24 +23,44 @@ const defaultOptions = {
   }
 }
 
+const formStates = Object.freeze({
+  IDLE: 'IDLE',
+  LOADING: 'LOADING',
+  SUCCESS: 'SUCCESS'
+});
+
+const initialFormValues = {
+  firstName: "",
+  lastName: "",
+  number: {
+    country: countriesWithISO[0],
+    number: ""
+  },
+  email: ""
+}
+
+const extractPhoneNumber = ({ country, number }) => {
+  let phoneNumber = ''
+  phoneNumber += country.ISO.slice(1) //To remove the plus sign
+  const numberWithoutSpace = number.split(' ').join('')
+  phoneNumber += numberWithoutSpace.replace(country.ISO, '') //In case the user types in their ISO with the normal number
+
+  return phoneNumber
+}
+
 const Register = () => {
   const [agree, setAgree] = useState(false)
-  const [formValues, setFormValues] = useState({
-    "First Name": "",
-    "Last Name": "",
-    "Phone Number": {
-      country: countriesWithISO[0],
-      number: ""
-    },
-    "Email": ""
-  })
-  const [showSuccess, setShowSuccess] = useState(false)
+  const [formValues, setFormValues] = useState(initialFormValues)
+  const [formState, setFormState] = useState(formStates.IDLE);
+
+  const isLoading = formState === formStates.LOADING;
+  const isSuccess = formState === formStates.SUCCESS;
 
   const setPhoneNumber = (newPhoneNumber) => {
     setFormValues(prevState => ({
       ...prevState,
-      "Phone Number": {
-        ...prevState["Phone Number"],
+      number: {
+        ...prevState.number,
         ...newPhoneNumber
       }
     }))
@@ -56,13 +77,22 @@ const Register = () => {
     setAgree(prevState => !prevState)
   }
 
-  const onSubmit = () => {
-    console.log(formValues)
-    setShowSuccess(true)
-    window.scrollTo({
-      top: 0,
-      left: 0
-    })
+  const onSubmit = async () => {
+    setFormState(formStates.LOADING)
+    try{
+      const formData = {...formValues};
+      formData.number = extractPhoneNumber(formValues.number)
+
+      await postData(formData)
+      setFormState(formStates.IDLE)
+
+      window.scrollTo({
+        top: 0,
+        left: 0
+      })
+    }catch (e) {
+      setFormState(formStates.IDLE)
+    }
   }
 
   const renderSuccess = () => {
@@ -93,30 +123,30 @@ const Register = () => {
           className="grid grid-cols-2 gap-x-8 gap-y-10 mb-10 w-55% lg-max:w-80% md-max:w-100% md-max:px-6 md-max:grid-cols-1 md-max:gap-x-6">
           <PhoneInput
             label="First Name"
-            name="first-name"
-            id="First Name"
+            name="first name"
+            id="firstName"
             onChange={onInputChange}
-            value={formValues["First Name"]}
+            value={formValues.firstName}
           />
           <PhoneInput
             label="Last name"
             name="last-name"
-            id="Last Name"
+            id="lastName"
             onChange={onInputChange}
-            value={formValues["Last Name"]}
+            value={formValues.lastName}
           />
           <PhoneNoInput
-            label="Phone number"
-            value={formValues["Phone Number"]}
+            label="Phone Number"
+            value={formValues.number}
             onChange={setPhoneNumber}
-            id="phoneNumber"
+            id="number"
           />
           <PhoneInput
             label="Email address"
             name="email"
-            id="Email"
+            id="email"
             onChange={onInputChange}
-            value={formValues["Email"]}
+            value={formValues.email}
           />
         </div>
         <div className="w-55% lg-max:w-80% md-max:w-100% md-max:px-6">
@@ -133,7 +163,12 @@ const Register = () => {
           />
         </div>
         <div className="mt-20 md-max:mt-12">
-          <Button elevated className="w-68.75" onClick={onSubmit}>
+          <Button
+            loading={isLoading}
+            elevated
+            className="w-68.75"
+            onClick={onSubmit}
+          >
             Pre-qualify
           </Button>
         </div>
@@ -155,7 +190,7 @@ const Register = () => {
           />
         </div>
         <section className="pt-28 flex flex-col items-center md-max:pt-12">
-          {showSuccess ? renderSuccess() : renderForm()}
+          {isSuccess ? renderSuccess() : renderForm()}
         </section>
       </main>
       <Footer />
