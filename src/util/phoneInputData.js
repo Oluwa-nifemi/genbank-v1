@@ -808,6 +808,7 @@ const countriesWithISO = [
     name: "Nigeria",
     ISO: "+234",
     countryCode: "NG",
+    enabled: true
   },
   {
     name: "Niue",
@@ -1023,6 +1024,7 @@ const countriesWithISO = [
     name: "South Africa",
     ISO: "+27",
     countryCode: "ZA",
+    enabled: true
   },
   {
     name: "South Sudan",
@@ -1229,6 +1231,7 @@ const countriesWithISO = [
     ISO: "+263",
     countryCode: "ZW",
   },
-].sort((countryA, countryB) => parseInt(countryA.ISO) - parseInt(countryB.ISO))
+// ].sort((countryA, countryB) => parseInt(countryA.ISO) - parseInt(countryB.ISO)) Maybe activate this when we have more countries
+].filter(country => country.enabled)
 
 export default countriesWithISO

@@ -1,27 +1,24 @@
 import React, { useState } from "react"
-import UMFlag from "../../assets/images/flags/UM.inline.svg"
 import DownIcon from "../../assets/images/down.inline.svg"
-import Flags from "country-flag-icons/react/3x2"
 import countriesWithISO from "../../util/phoneInputData"
 import { classNames } from "../../util/functions"
 import { AsYouType }  from 'libphonenumber-js'
 
-const Option = ({ children, onClick, flag: Flag }) => (
+const Option = ({ children, onClick, countryCode }) => (
   <button
     className="w-100% flex items-center py-3 outline-none bg-blue-600 gap-x-3 px-2 duration-150 hover:bg-blue-700"
     onClick={onClick}
   >
-    <Flag className="flex-shrink-0 w-6" />
+    <span className="text-sm font-plex-hebrew text-white">
+      {countryCode}
+    </span>
     <span className="text-sm font-plex-hebrew text-white">
       {children}
     </span>
   </button>
 )
 
-const getFlagViaCountryCode = code => Flags[code] || UMFlag
-
 const CountryDropdown = ({ value, onChange }) => {
-  const Flag = getFlagViaCountryCode(value.countryCode)
   const [showOptions, setShowOptions] = useState(false)
   //TODO: Hide on click outside
   const toggleShowOptions = () => setShowOptions(prevState => !prevState)
@@ -34,10 +31,14 @@ const CountryDropdown = ({ value, onChange }) => {
   return (
     <div className="h-100% flex-shrink-0">
       <button onClick={toggleShowOptions} className="flex items-center gap-x-2.5 h-100%">
-        <Flag className="flex-shrink-0 w-8" />
-        <span className="text-lg font-plex-hebrew text-white">
-          {value.ISO}
-        </span>
+        <p className="text-lg font-plex-hebrew text-white space-x-2">
+          <span>
+            {value.countryCode}
+          </span>
+          <span>
+            {value.ISO}
+          </span>
+        </p>
         <DownIcon className="flex-shrink-0" />
       </button>
       <div
@@ -51,8 +52,8 @@ const CountryDropdown = ({ value, onChange }) => {
         {
           countriesWithISO.map(country => (
             <Option
-              flag={getFlagViaCountryCode(country.countryCode)}
               onClick={onChangeCountry(country)}
+              countryCode={country.countryCode}
             >
               {country.ISO}
             </Option>
