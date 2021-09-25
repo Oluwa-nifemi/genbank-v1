@@ -6,8 +6,8 @@ import ArrowRightAngled from '../assets/images/arrow-angled-right.inline.svg'
 
 const DownloadCard = ({ icon: Icon, topText, destination }) => {
   return (
-    <div className='py-3 px-4 bg-blue-600 rounded-8 flex items-center w-40'>
-      <Icon/>
+    <div className='py-3 px-4 bg-blue-600 rounded-8 flex items-center w-40 cursor-not-allowed'>
+      <Icon className='filter grayscale opacity-70'/>
       <div className='text-gray font-plex-hebrew ml-3'>
         <p className='text-download-from'>
           {topText}
