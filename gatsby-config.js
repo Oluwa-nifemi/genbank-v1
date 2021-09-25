@@ -34,5 +34,16 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Genbank`,
+        short_name: `Genbank`,
+        start_url: `/`,
+        background_color: `#0A2E34`,
+        theme_color: `#1565D8`,
+        icon: `src/assets/images/favicon.png`,
+      },
+    }
   ],
 }
