@@ -10,6 +10,7 @@ import countriesWithISO from "../util/phoneInputData"
 import "./register.css"
 import Lottie from "react-lottie"
 import successAnimation from "../assets/animations/success-form.json"
+import { Link } from "gatsby"
 
 const defaultOptions = {
   loop: false,
@@ -123,7 +124,11 @@ const Register = () => {
             onChange={toggleAgree}
             checked={agree}
             name="Agree"
-            label="By signing up, I agree to Genbank Financial, LLC’s Terms and Condition."
+            label={
+              <>
+                By signing up, I agree to Genbank Financial, LLC’s <Link to='/register#disclaimer' className='font-bold'>Terms and Conditions.</Link>
+              </>
+            }
           />
         </div>
         <div className="mt-20 md-max:mt-12">

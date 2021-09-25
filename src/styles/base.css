@@ -4,8 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
-  @apply bg-blue-1000
+  @apply bg-blue-1000;
 }
 
 .container {

@@ -3,6 +3,7 @@ import LogoIcon from "../assets/images/logo.inline.svg"
 import PlayStoreIcon from "../assets/images/play-store.inline.svg"
 import AppleStoreIcon from "../assets/images/apple.inline.svg"
 import ArrowRightAngled from '../assets/images/arrow-angled-right.inline.svg'
+import './footer.css'
 
 const DownloadCard = ({ icon: Icon, topText, destination }) => {
   return (
@@ -79,7 +80,7 @@ const Footer = () => {
           />
         </div>
       </div>
-      <div className='text-base text-disclaimer font-plex-hebrew pb-10 border-disclaimer-border border-b mb-10'>
+      <div className='text-base text-disclaimer font-plex-hebrew pb-10 border-disclaimer-border border-b mb-10' id='disclaimer'>
         <p className='flex items-center mb-4'>
           <span className='w-14 h-0.5 bg-disclaimer inline-flex mr-4'/>
           <span>
