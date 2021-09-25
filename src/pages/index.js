@@ -111,8 +111,8 @@ const IndexPage = () => {
         </div>
         <section className="pt-28 container flex flex-col items-center first-section md-max:pt-12 relative">
           <h1
-            className="font-plex-serif text-hero font-medium mb-8 w-62% text-white text-center md-max:text-hero-mobile md-max:w-100% md-max:mb-10">
-            Open a US Bank account from <Typewriter />
+            className="font-plex-serif text-hero font-medium mb-8 w-70% text-white text-center md-max:text-hero-mobile md-max:w-100% md-max:mb-10">
+            Open a US Bank account <br/> from <Typewriter />
           </h1>
           <h3 className={`
           px-28 py-5 bg-blue-700 rounded-10 text-description text-white mb-20 bg-opacity-40 font-plex-hebrew backdrop-filter backdrop-blur-sm text-center

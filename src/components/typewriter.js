@@ -4,7 +4,6 @@ import { classNames } from "../util/functions"
 
 const options = [
   'Nigeria',
-  'United States',
   'South Africa'
 ]
 
