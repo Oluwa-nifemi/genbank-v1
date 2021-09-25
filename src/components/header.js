@@ -14,8 +14,8 @@ const Header = ({ hasBackButton }) => {
   }
 
   return (
-    <header className='container h-20 flex justify-between items-center bg-blue-1000 bg-opacity-481'>
-      <Link to='./'>
+    <header className='container h-20 flex justify-between items-center bg-blue-1000 bg-opacity-48 fixed z-10 backdrop-filter backdrop-blur-md'>
+      <Link to='/'>
         <LogoIcon/>
       </Link>
       {

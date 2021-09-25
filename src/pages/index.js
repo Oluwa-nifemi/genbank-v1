@@ -100,8 +100,8 @@ const IndexPage = () => {
   return (
     <>
       <Header />
-      <main className="relative overflow-hidden">
-        <div className="absolute w-full top-0 left-0 pointer-events-none md-max:hidden">
+      <main className="relative overflow-hidden pt-20">
+        <div className="absolute w-full top-20 left-0 pointer-events-none md-max:hidden">
           <StaticImage
             placeholder="none"
             loading="eager"
