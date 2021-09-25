@@ -24,7 +24,7 @@ const Header = ({ hasBackButton }) => {
             <CloseIcon/>
           </button>
         ) : (
-          <Button onClick={onClickQualify} className='w-41.25 md-max:w-36'>
+          <Button onClick={onClickQualify} className='w-41.25 md-max:w-36' largeButton={false}>
             Pre-qualify
           </Button>
         )

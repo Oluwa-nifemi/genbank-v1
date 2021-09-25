@@ -72,6 +72,8 @@ module.exports = {
         'fit-content': 'fit-content',
         30: rem(120),
         '22.5': rem(90),
+        '3.5': rem(14),
+        '4.75': rem(19),
         'unset': 'unset'
       },
       zIndex: {

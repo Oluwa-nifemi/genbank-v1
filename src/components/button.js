@@ -3,7 +3,7 @@ import ArrowRight from "../assets/images/arrow-right.inline.svg"
 import { classNames } from "../util/functions"
 import './button.scss'
 
-const Button = ({ children, className, elevated, hasWhiteBackground, onClick }) => {
+const Button = ({ children, className, elevated, hasWhiteBackground, onClick, largeButton = true }) => {
   const colorsClasses = {
     button: hasWhiteBackground ? "text-blue-400 bg-white white-button" : "text-blue-100 bg-blue-400",
     arrow: hasWhiteBackground ? "text-blue-400" : "text-white",
@@ -15,8 +15,9 @@ const Button = ({ children, className, elevated, hasWhiteBackground, onClick }) 
       <button
         className={
           classNames(
-            "px-4 cursor-pointer py-3 text-base font-plex-hebrew flex items-center md-max:text-sm max-w-100% action-button",
+            "px-4 cursor-pointer font-plex-hebrew flex items-center md-max:text-sm max-w-100% action-button",
             elevated && "focus:transform focus:translate-x-1 focus:translate-y-1 z-10 relative duration-150",
+            largeButton ? "py-4.75" : "py-3.5 md-max:py-3",
             colorsClasses.button,
             className
           )
@@ -24,7 +25,12 @@ const Button = ({ children, className, elevated, hasWhiteBackground, onClick }) 
         onClick={onClick}
       >
         <span className='text-wrapper'>
-          <span className='text'>
+          <span className={
+            classNames(
+              largeButton ? "text-description" : "text-base md-max:text-sm leading-5 h-5",
+              'text'
+            )
+          }>
             {children}
             <ArrowRight className={classNames("md-max:w-4 md-max:h-4 icon", colorsClasses.arrow)} />
           </span>
