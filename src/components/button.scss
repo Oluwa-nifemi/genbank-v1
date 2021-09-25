@@ -50,6 +50,18 @@
       transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
     }
   }
+
+  &.white-button{
+    &::before{
+      @apply bg-blue-500
+    }
+
+    &:hover{
+      .text, .icon{
+        @apply text-white
+      }
+    }
+  }
 }
 
 //Move up and out of view
