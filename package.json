@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "axios": "^0.21.4",
     "country-flag-icons": "^1.4.10",
     "gatsby": "^3.13.1",
     "gatsby-plugin-image": "^1.13.0",
@@ -22,6 +23,7 @@
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-lottie": "^1.2.3",
+    "react-toastify": "^8.0.3",
     "sass": "^1.42.1",
     "uuid": "^8.3.2"
   },
