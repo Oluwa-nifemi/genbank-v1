@@ -4,11 +4,23 @@ import { classNames } from "../../util/functions"
 import './button.scss'
 import { PulseLoader } from "react-spinners"
 
-const Button = ({ children, className, elevated, hasWhiteBackground, onClick, largeButton = true, loading }) => {
+const getElevationClass = ({hasWhiteBackground, isDisabled}) => {
+  if(isDisabled) {
+    return 'border-blue-800 '
+  }
+
+  if(hasWhiteBackground){
+    return "border-white group-hover:border-blue-400"
+  }
+
+  return "border-blue-400 group-hover:border-white"
+}
+
+const Button = ({ children, className, elevated, hasWhiteBackground, onClick, largeButton = true, loading, disabled }) => {
   const colorsClasses = {
     button: hasWhiteBackground ? "text-blue-400 bg-white white-button" : "text-blue-100 bg-blue-400",
     arrow: hasWhiteBackground ? "text-blue-400" : "text-white",
-    elevation: hasWhiteBackground ? "border-white group-hover:border-blue-400" : "border-blue-400 group-hover:border-white"
+    elevation: getElevationClass({hasWhiteBackground, isDisabled: disabled})
   }
 
   const renderContent = () => {
@@ -47,7 +59,7 @@ const Button = ({ children, className, elevated, hasWhiteBackground, onClick, la
             className
           )
         }
-        disabled={loading}
+        disabled={loading || disabled}
         onClick={onClick}
       >
         {renderContent()}

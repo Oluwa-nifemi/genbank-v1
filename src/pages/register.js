@@ -182,6 +182,7 @@ const Register = () => {
             elevated
             className="w-68.75"
             onClick={onSubmit}
+            disabled={!agree}
           >
             Pre-qualify
           </Button>
