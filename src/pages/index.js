@@ -7,6 +7,7 @@ import "./index.css"
 import { StaticImage } from "gatsby-plugin-image"
 import Footer from "../components/footer/footer"
 import { navigate } from "gatsby"
+import Seo from "../components/seo"
 
 const features = [
   {
@@ -99,6 +100,7 @@ const IndexPage = () => {
 
   return (
     <>
+      <Seo title='Home'/>
       <Header />
       <main className="relative overflow-hidden pt-20">
         <div className="absolute w-full top-20 left-0 pointer-events-none md-max:hidden">

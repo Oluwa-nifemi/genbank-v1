@@ -11,6 +11,7 @@ import "./register.css"
 import Lottie from "react-lottie"
 import successAnimation from "../assets/animations/success-form.json"
 import { Link } from "gatsby"
+import Seo from "../components/seo"
 
 const defaultOptions = {
   loop: false,
@@ -142,6 +143,7 @@ const Register = () => {
 
   return (
     <>
+      <Seo title='Pre-qualify'/>
       <Header hasBackButton />
       <main className="relative overflow-hidden pb-56 md-max:pb-40 pt-20">
         <div className="absolute w-full top-20 left-0 pointer-events-none md-max:hidden">
