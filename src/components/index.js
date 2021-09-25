@@ -1,7 +1,7 @@
 import React, { useState } from "react"
-import DownIcon from "../../assets/images/down.inline.svg"
-import countriesWithISO from "../../util/phoneInputData"
-import { classNames } from "../../util/functions"
+import DownIcon from "../assets/images/down.inline.svg"
+import countriesWithISO from "../util/phoneInputData"
+import { classNames } from "../util/functions"
 import { AsYouType }  from 'libphonenumber-js'
 
 const Option = ({ children, onClick, countryCode }) => (
