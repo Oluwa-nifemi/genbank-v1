@@ -1023,7 +1023,7 @@ const countriesWithISO = [
   {
     name: "South Africa",
     ISO: "+27",
-    countryCode: "ZA",
+    countryCode: "SA",
     enabled: true
   },
   {
