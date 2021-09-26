@@ -17,6 +17,7 @@ import emailjs from "emailjs-com"
 import { Formik } from "formik"
 import * as Yup from "yup"
 import { isValidPhoneNumber } from "libphonenumber-js"
+import { toast } from "react-toastify"
 
 const defaultOptions = {
   loop: false,
@@ -116,6 +117,9 @@ const Register = () => {
       })
     }catch (e) {
       setFormState(formStates.IDLE)
+      toast.error(
+        "Something went wrong while submitting the form. Kindly check your internet connection and try again"
+      )
     }
   }
 
