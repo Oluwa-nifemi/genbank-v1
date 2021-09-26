@@ -76,21 +76,10 @@ const extractPhoneNumber = ({ country, number }) => {
 
 const Register = () => {
   const [agree, setAgree] = useState(false)
-  const [formValues, setFormValues] = useState(initialFormValues)
   const [formState, setFormState] = useState(formStates.IDLE);
 
   const isLoading = formState === formStates.LOADING;
   const isSuccess = formState === formStates.SUCCESS;
-
-  const setPhoneNumber = (newPhoneNumber) => {
-    setFormValues(prevState => ({
-      ...prevState,
-      number: {
-        ...prevState.number,
-        ...newPhoneNumber
-      }
-    }))
-  }
 
   const toggleAgree = () => {
     setAgree(prevState => !prevState)
