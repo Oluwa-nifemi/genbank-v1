@@ -65,7 +65,7 @@ const CountryDropdown = ({ value, onChange }) => {
   )
 }
 
-const PhoneNoInput = ({ label, id }) => {
+const PhoneInput = ({ label, id }) => {
   const [field, meta, helpers] = useField(id)
 
   const onChange = helpers.setValue
@@ -125,4 +125,4 @@ const PhoneNoInput = ({ label, id }) => {
   )
 }
 
-export default PhoneNoInput
+export default PhoneInput

@@ -5,7 +5,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import Input from "../components/input"
 import Checkbox from "../components/checkbox"
 import Button from "../components/button/button"
-import PhoneNoInput from "../components/phone-input"
+import PhoneInput from "../components/phone-input"
 import countriesWithISO from "../util/phoneInputData"
 import "./register.css"
 import Lottie from "react-lottie"
@@ -172,7 +172,7 @@ const Register = () => {
                   name="last-name"
                   id="lastName"
                 />
-                <PhoneNoInput
+                <PhoneInput
                   label="Phone Number"
                   id="number"
                 />
