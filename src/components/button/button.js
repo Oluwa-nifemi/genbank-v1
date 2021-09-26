@@ -10,7 +10,7 @@ const getElevationClass = ({hasWhiteBackground, isDisabled}) => {
   }
 
   if(hasWhiteBackground){
-    return "border-white group-hover:border-blue-400"
+    return "border-white"
   }
 
   return "border-blue-400 group-hover:border-white"
