@@ -4,22 +4,25 @@ import countriesWithISO from "../util/phoneInputData"
 import { classNames } from "../util/functions"
 import { AsYouType }  from 'libphonenumber-js'
 import { useField } from "formik"
+import UMFlag from "../assets/images/flags/UM.inline.svg"
+import Flags from "country-flag-icons/react/3x2"
 
-const Option = ({ children, onClick, countryCode }) => (
+const Option = ({ children, onClick, flag: Flag }) => (
   <button
     className="w-100% flex items-center py-3 outline-none bg-blue-600 gap-x-3 px-2 duration-150 hover:bg-blue-700"
     onClick={onClick}
   >
-    <span className="text-sm font-plex-hebrew text-white">
-      {countryCode}
-    </span>
+    <Flag className="flex-shrink-0 w-6" />
     <span className="text-sm font-plex-hebrew text-white">
       {children}
     </span>
   </button>
 )
 
+const getFlagViaCountryCode = code => Flags[code] || UMFlag
+
 const CountryDropdown = ({ value, onChange }) => {
+  const Flag = getFlagViaCountryCode(value.countryCode)
   const [showOptions, setShowOptions] = useState(false)
   //TODO: Hide on click outside
   const toggleShowOptions = () => setShowOptions(prevState => !prevState)
@@ -32,14 +35,10 @@ const CountryDropdown = ({ value, onChange }) => {
   return (
     <div className="h-100% flex-shrink-0">
       <button onClick={toggleShowOptions} className="flex items-center gap-x-2.5 h-100%">
-        <p className="text-lg font-plex-hebrew text-white space-x-2">
-          <span>
-            {value.countryCode}
-          </span>
-          <span>
+        <Flag className="flex-shrink-0 w-8" />
+        <span className="text-lg font-plex-hebrew text-white">
             {value.ISO}
           </span>
-        </p>
         <DownIcon className="flex-shrink-0" />
       </button>
       <div
@@ -54,7 +53,7 @@ const CountryDropdown = ({ value, onChange }) => {
           countriesWithISO.map(country => (
             <Option
               onClick={onChangeCountry(country)}
-              countryCode={country.countryCode}
+              flag={getFlagViaCountryCode(country.countryCode)}
             >
               {country.ISO}
             </Option>

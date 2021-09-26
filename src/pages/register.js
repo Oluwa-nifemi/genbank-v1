@@ -57,6 +57,7 @@ const formValidationSchema = Yup.object(
           function (value) {
             if(!this.parent.country) return true
 
+            if(!value) return false
             const countryCode = this.parent.country.countryCode;
 
             return isValidPhoneNumber(value, countryCode)
