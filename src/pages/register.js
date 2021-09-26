@@ -14,6 +14,8 @@ import { Link } from "gatsby"
 import Seo from "../components/seo"
 import { postData } from "../api/api"
 import emailjs from "emailjs-com"
+import { Formik } from "formik"
+import * as Yup from "yup"
 
 const defaultOptions = {
   loop: false,
@@ -39,6 +41,14 @@ const initialFormValues = {
   },
   email: ""
 }
+
+const formValidationSchema = Yup.object(
+  {
+    firstName: Yup.string().required("Kindly input your first name"),
+    lastName: Yup.string().required("Kindly input your last name"),
+    email: Yup.string().email("Kindly input a valid email address").required("Kindly input your email")
+  }
+)
 
 const extractPhoneNumber = ({ country, number }) => {
   let phoneNumber = ''
@@ -78,7 +88,7 @@ const Register = () => {
     setAgree(prevState => !prevState)
   }
 
-  const onSubmit = async () => {
+  const onSubmit = async (formValues) => {
     setFormState(formStates.LOADING)
     try{
       const formData = {...formValues};
@@ -129,65 +139,69 @@ const Register = () => {
 
   const renderForm = () => {
     return (
-      <>
-        <h1 className="formHeader text-white font-plex-serif mb-8">
-          Pre-qualification form
-        </h1>
-        <div
-          className="grid grid-cols-2 gap-x-8 gap-y-10 mb-10 w-55% lg-max:w-80% md-max:w-100% md-max:px-6 md-max:grid-cols-1 md-max:gap-x-6">
-          <Input
-            label="First Name"
-            name="first name"
-            id="firstName"
-            onChange={onInputChange}
-            value={formValues.firstName}
-          />
-          <Input
-            label="Last name"
-            name="last-name"
-            id="lastName"
-            onChange={onInputChange}
-            value={formValues.lastName}
-          />
-          <PhoneNoInput
-            label="Phone Number"
-            value={formValues.number}
-            onChange={setPhoneNumber}
-            id="number"
-          />
-          <Input
-            label="Email address"
-            name="email"
-            id="email"
-            onChange={onInputChange}
-            value={formValues.email}
-          />
-        </div>
-        <div className="w-55% lg-max:w-80% md-max:w-100% md-max:px-6">
-          <Checkbox
-            id="agree"
-            onChange={toggleAgree}
-            checked={agree}
-            name="Agree"
-            label={
-              <>
-                By signing up, I agree to Genbank Financial, LLC’s <Link to='/register#disclaimer' className='font-bold'>Terms and Conditions.</Link>
-              </>
-            }
-          />
-        </div>
-        <div className="mt-20 md-max:mt-12">
-          <Button
-            loading={isLoading}
-            elevated
-            className="w-68.75"
-            onClick={onSubmit}
-            disabled={!agree}
-          >
-            Pre-qualify
-          </Button>
-        </div>
-      </>
+      <Formik
+        initialValues={initialFormValues}
+        onSubmit={onSubmit}
+        validationSchema={formValidationSchema}
+      >
+        {
+          formik => (
+            <>
+              <h1 className="formHeader text-white font-plex-serif mb-8">
+                Pre-qualification form
+              </h1>
+              <div
+                className="grid grid-cols-2 gap-x-8 gap-y-10 mb-10 w-55% lg-max:w-80% md-max:w-100% md-max:px-6 md-max:grid-cols-1 md-max:gap-x-6">
+                <Input
+                  label="First Name"
+                  name="first name"
+                  id="firstName"
+                />
+                <Input
+                  label="Last name"
+                  name="last-name"
+                  id="lastName"
+                />
+                <PhoneNoInput
+                  label="Phone Number"
+                  value={formValues.number}
+                  onChange={setPhoneNumber}
+                  id="number"
+                />
+                <Input
+                  label="Email address"
+                  name="email"
+                  id="email"
+                />
+              </div>
+              <div className="w-55% lg-max:w-80% md-max:w-100% md-max:px-6">
+                <Checkbox
+                  id="agree"
+                  onChange={toggleAgree}
+                  checked={agree}
+                  name="Agree"
+                  label={
+                    <>
+                      By signing up, I agree to Genbank Financial, LLC’s <Link to='/register#disclaimer' className='font-bold'>Terms and Conditions.</Link>
+                    </>
+                  }
+                />
+              </div>
+              <div className="mt-20 md-max:mt-12">
+                <Button
+                  loading={isLoading}
+                  elevated
+                  className="w-68.75"
+                  onClick={formik.handleSubmit}
+                  disabled={!agree}
+                >
+                  Pre-qualify
+                </Button>
+              </div>
+            </>
+          )
+        }
+      </Formik>
     )
   }
 

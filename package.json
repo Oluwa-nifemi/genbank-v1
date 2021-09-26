@@ -8,6 +8,7 @@
     "axios": "^0.21.4",
     "country-flag-icons": "^1.4.10",
     "emailjs-com": "^3.2.0",
+    "formik": "^2.2.9",
     "gatsby": "^3.13.1",
     "gatsby-plugin-image": "^1.13.0",
     "gatsby-plugin-manifest": "^3.13.0",
@@ -27,7 +28,8 @@
     "react-spinners": "^0.11.0",
     "react-toastify": "^8.0.3",
     "sass": "^1.42.1",
-    "uuid": "^8.3.2"
+    "uuid": "^8.3.2",
+    "yup": "^0.32.9"
   },
   "devDependencies": {
     "autoprefixer": "^10.3.4",
