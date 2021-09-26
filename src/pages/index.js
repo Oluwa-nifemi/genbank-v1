@@ -113,15 +113,18 @@ const IndexPage = () => {
         </div>
         <section className="pt-28 container flex flex-col items-center first-section md-max:pt-12 relative">
           <h1
-            className="font-plex-serif text-hero font-medium mb-8 w-70% text-white text-center md-max:text-hero-mobile md-max:w-100% md-max:mb-10">
+            className="font-plex-serif text-hero font-medium mb-6 w-70% text-white text-center md-max:text-hero-mobile md-max:w-100% md-max:mb-10 uppercase">
             Open a US Bank account <br/> from <Typewriter />
           </h1>
-          <h3 className={`
+          <h3 className='font-plex-hebrew text-description mb-6 text-white w-55% text-center md-max:w-100%'>
+            Genbank offers best-in-class US banking services to African individuals and businesses with worldwide access.
+          </h3>
+          <h5 className={`
           px-28 py-5 bg-blue-700 rounded-10 text-description text-white mb-20 bg-opacity-40 font-plex-hebrew backdrop-filter backdrop-blur-sm text-center
           md-max:text-base md-max:px-9 md-max:py-4 md-max:mb-10
         `}>
-            Enjoy unlimited banking from anywhere.
-          </h3>
+            Enjoy borderless banking.
+          </h5>
           <Button className="w-68.75" elevated onClick={onClickQualify}>
             Pre-qualify
           </Button>
@@ -171,9 +174,14 @@ const IndexPage = () => {
         <section className="py-30 container md-max:py-20">
           <div
             className="px-30 py-22.5 flex justify-between items-center bg-blue-500 rounded-2xl relative overflow-hidden md-max:flex-col md-max:py-10 md-max:px-6 md-max:items-start">
-            <h1 className="stayAhead text-white font-plex-hebrew z-10 md-max:mb-20">
-              Stay <br /> ahead!
-            </h1>
+            <div className='z-10 md-max:mb-20'>
+              <h3 className="stayAhead text-white font-plex-hebrew md-max:mb-10 mb-4">
+                Embrace the power of <br/> borderless banking.
+              </h3>
+              <p className='text-description font-plex-hebrew text-white md-max:text-base md-max:mb-2.5'>
+                Sign up for early access.
+              </p>
+            </div>
             <Button
               hasWhiteBackground
               className="w-68.75 z-10"

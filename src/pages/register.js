@@ -128,10 +128,10 @@ const Register = () => {
           width={378}
         />
         <h3 className="formHeader font-plex-hebrew text-white mb-4">
-          You are pre-qualified!
+          Congratulations!
         </h3>
         <p className="text-xl md:text-base font-plex-hebrew text-white">
-          Thank you for signing up.
+          You are prequalified and have been signed up for early access.
         </p>
       </div>
     )

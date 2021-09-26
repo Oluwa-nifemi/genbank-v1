@@ -99,7 +99,7 @@ const Typewriter = () => {
 
   return (
     <p className='inline-flex items-stretch leading-none'>
-      <span className='text-blue-200 italic'>
+      <span className='text-blue-200 italic capitalize'>
         {typeState.currentText}
       </span>
       <span className={classNames('inline-block border-l border-white ml-2', blinkCursor && 'blinking-cursor')}/>

@@ -8,8 +8,8 @@
 }
 
 .stayAhead{
-  font-size: 4.5rem;
-  line-height: 5.875rem;
+  font-size: 3rem;
+  line-height: 3.9rem;
 }
 
 @media (max-width: 1024px) {
@@ -45,8 +45,8 @@
   }
 
   .stayAhead{
-    font-size: 3.375rem;
-    line-height: 4.375rem;
+    font-size: 1.625rem;
+    line-height: 2.125rem;
   }
 }
 
