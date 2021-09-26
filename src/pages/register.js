@@ -16,6 +16,7 @@ import { postData } from "../api/api"
 import emailjs from "emailjs-com"
 import { Formik } from "formik"
 import * as Yup from "yup"
+import { isValidPhoneNumber } from "libphonenumber-js"
 
 const defaultOptions = {
   loop: false,
@@ -46,7 +47,21 @@ const formValidationSchema = Yup.object(
   {
     firstName: Yup.string().required("Kindly input your first name"),
     lastName: Yup.string().required("Kindly input your last name"),
-    email: Yup.string().email("Kindly input a valid email address").required("Kindly input your email")
+    email: Yup.string().email("Kindly input a valid email address").required("Kindly input your email"),
+    number: Yup.object({
+      number: Yup.string()
+        .required("Kindly input a phone number")
+        .test(
+          "check valid number",
+          "Kindly input a valid phone number",
+          function (value) {
+            if(!this.parent.country) return true
+
+            const countryCode = this.parent.country.countryCode;
+
+            return isValidPhoneNumber(value, countryCode)
+        })
+    })
   }
 )
 
@@ -77,18 +92,13 @@ const Register = () => {
     }))
   }
 
-  const onInputChange = ({ target }) => {
-    setFormValues(prevState => ({
-      ...prevState,
-      [target.id]: target.value
-    }))
-  }
-
   const toggleAgree = () => {
     setAgree(prevState => !prevState)
   }
 
   const onSubmit = async (formValues) => {
+    if(!agree) return //In case they toy with dev tools
+
     setFormState(formStates.LOADING)
     try{
       const formData = {...formValues};
@@ -164,8 +174,6 @@ const Register = () => {
                 />
                 <PhoneNoInput
                   label="Phone Number"
-                  value={formValues.number}
-                  onChange={setPhoneNumber}
                   id="number"
                 />
                 <Input

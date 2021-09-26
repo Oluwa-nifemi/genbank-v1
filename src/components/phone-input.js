@@ -3,6 +3,7 @@ import DownIcon from "../assets/images/down.inline.svg"
 import countriesWithISO from "../util/phoneInputData"
 import { classNames } from "../util/functions"
 import { AsYouType }  from 'libphonenumber-js'
+import { useField } from "formik"
 
 const Option = ({ children, onClick, countryCode }) => (
   <button
@@ -64,7 +65,25 @@ const CountryDropdown = ({ value, onChange }) => {
   )
 }
 
-const PhoneNoInput = ({ value, onChange, label, id }) => {
+const PhoneNoInput = ({ label, id }) => {
+  const [field, meta, helpers] = useField(id)
+
+  const onChange = helpers.setValue
+  const value = field.value
+
+  const hasError = meta.error && meta.touched;
+
+  const renderError = () => {
+    if(!hasError) return null
+
+    return (
+      <span className="text-red font-plex-hebrew text-sm">
+        {meta.error.number}
+      </span>
+    )
+  }
+
+
   const onChangeCountry = (newCountry) => {
     const convertedNumber =  new AsYouType(newCountry.countryCode).input(value.number);
 
@@ -101,6 +120,7 @@ const PhoneNoInput = ({ value, onChange, label, id }) => {
           onChange={onChangeInput}
         />
       </div>
+      {renderError()}
     </div>
   )
 }
