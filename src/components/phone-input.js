@@ -1,20 +1,108 @@
-import React from "react"
+import React, { useState } from "react"
+import DownIcon from "../assets/images/down.inline.svg"
+import countriesWithISO from "../util/phoneInputData"
+import { classNames } from "../util/functions"
+import { AsYouType }  from 'libphonenumber-js'
 
-const PhoneInput = ({ label, value, onChange, id }) => {
+const Option = ({ children, onClick, countryCode }) => (
+  <button
+    className="w-100% flex items-center py-3 outline-none bg-blue-600 gap-x-3 px-2 duration-150 hover:bg-blue-700"
+    onClick={onClick}
+  >
+    <span className="text-sm font-plex-hebrew text-white">
+      {countryCode}
+    </span>
+    <span className="text-sm font-plex-hebrew text-white">
+      {children}
+    </span>
+  </button>
+)
+
+const CountryDropdown = ({ value, onChange }) => {
+  const [showOptions, setShowOptions] = useState(false)
+  //TODO: Hide on click outside
+  const toggleShowOptions = () => setShowOptions(prevState => !prevState)
+
+  const onChangeCountry = (country) => () => {
+    onChange(country)
+    toggleShowOptions()
+  }
+
   return (
-    <div>
-      <label className='text-lg text-white font-plex-hebrew mb-3 flex' htmlFor={id}>
-        {label}
-      </label>
-      <input
-        type="text"
-        className="h-18 flex items-center text-lg font-plex-hebrew w-100% pl-4 bg-blue-800 text-white border border-transparent duration-300 outline-none focus:border-blue-200 focus:outline-none md-max:h-14"
-        value={value}
-        onChange={onChange}
-        id={id}
-      />
+    <div className="h-100% flex-shrink-0">
+      <button onClick={toggleShowOptions} className="flex items-center gap-x-2.5 h-100%">
+        <p className="text-lg font-plex-hebrew text-white space-x-2">
+          <span>
+            {value.countryCode}
+          </span>
+          <span>
+            {value.ISO}
+          </span>
+        </p>
+        <DownIcon className="flex-shrink-0" />
+      </button>
+      <div
+        className={
+          classNames(
+            "absolute top-100% left-0 max-h-56 overflow-auto z-10 duration-300 opacity-1 transform",
+            !showOptions && "opacity-0 pointer-events-none translate-y-2"
+          )
+        }
+      >
+        {
+          countriesWithISO.map(country => (
+            <Option
+              onClick={onChangeCountry(country)}
+              countryCode={country.countryCode}
+            >
+              {country.ISO}
+            </Option>
+          ))
+        }
+      </div>
     </div>
   )
 }
 
-export default PhoneInput
+const PhoneNoInput = ({ value, onChange, label, id }) => {
+  const onChangeCountry = (newCountry) => {
+    const convertedNumber =  new AsYouType(newCountry.countryCode).input(value.number);
+
+    onChange({
+      number: convertedNumber,
+      country: newCountry
+    })
+  }
+
+  const onChangeInput = ({target}) => {
+    const convertedNumber =  new AsYouType(value.country.countryCode).input(target.value);
+
+    onChange({
+      ...value,
+      number: convertedNumber
+    })
+  }
+
+  return (
+    <div>
+      <label className="text-lg text-white font-plex-hebrew mb-3 flex" htmlFor={id}>
+        {label}
+      </label>
+      <div className="bg-blue-800 flex items-center px-4 relative md-max:flex-nowrap border border-transparent focus-within:border-blue-200">
+        <CountryDropdown
+          value={value.country}
+          onChange={onChangeCountry}
+        />
+        <span className="h-14 border-l border-blue-phone-input-border flex ml-5 mr-4 md-max:mx-2.5 md-max:h-10" />
+        <input
+          className="h-18 flex items-center text-lg font-plex-hebrew flex-grow bg-blue-800 text-white border-none outline-none focus:outline-none md-max:h-14 w-100%"
+          id={id}
+          value={value.number}
+          onChange={onChangeInput}
+        />
+      </div>
+    </div>
+  )
+}
+
+export default PhoneNoInput

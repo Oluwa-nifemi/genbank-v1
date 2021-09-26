@@ -2,10 +2,10 @@ import React, { useState } from "react"
 import Footer from "../components/footer/footer"
 import Header from "../components/header"
 import { StaticImage } from "gatsby-plugin-image"
-import PhoneInput from "../components/phone-input"
+import Input from "../components/input"
 import Checkbox from "../components/checkbox"
 import Button from "../components/button/button"
-import PhoneNoInput from "../components"
+import PhoneNoInput from "../components/phone-input"
 import countriesWithISO from "../util/phoneInputData"
 import "./register.css"
 import Lottie from "react-lottie"
@@ -135,14 +135,14 @@ const Register = () => {
         </h1>
         <div
           className="grid grid-cols-2 gap-x-8 gap-y-10 mb-10 w-55% lg-max:w-80% md-max:w-100% md-max:px-6 md-max:grid-cols-1 md-max:gap-x-6">
-          <PhoneInput
+          <Input
             label="First Name"
             name="first name"
             id="firstName"
             onChange={onInputChange}
             value={formValues.firstName}
           />
-          <PhoneInput
+          <Input
             label="Last name"
             name="last-name"
             id="lastName"
@@ -155,7 +155,7 @@ const Register = () => {
             onChange={setPhoneNumber}
             id="number"
           />
-          <PhoneInput
+          <Input
             label="Email address"
             name="email"
             id="email"
