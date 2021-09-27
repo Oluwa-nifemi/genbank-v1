@@ -47,10 +47,10 @@ const Footer = () => {
           <h5 className='text-xl font-light text-white font-plex-hebrew mb-6 md-max:text-base'>
             Resources
           </h5>
-          <a href="https://genbank.medium.com/" target='_blank' rel='noreferrer' className='text-xl text-white font-plex-hebrew mb-4 block md-max:text-base'>
+          <a href="https://genbank.medium.com/" target='_blank' rel='noreferrer' className='text-xl text-white font-plex-hebrew mb-4 block md-max:text-base duration-300 hover:text-blue-300'>
             Read
           </a>
-          <a href="https://www.google.com" target='_blank' rel='noreferrer' className='text-xl text-white font-plex-hebrew block md-max:text-base'>
+          <a href="https://www.google.com" target='_blank' rel='noreferrer' className='text-xl text-white font-plex-hebrew block md-max:text-base duration-300 hover:text-blue-300'>
             Career
           </a>
         </div>
@@ -58,11 +58,11 @@ const Footer = () => {
           <h5 className='text-xl font-light text-white font-plex-hebrew mb-6 md-max:text-base'>
             Connect with us:
           </h5>
-          <a href="https://www.google.com" target='_blank' rel='noreferrer' className='text-xl text-white font-plex-hebrew mb-4 block md-max:text-base'>
+          <a href="https://www.google.com" target='_blank' rel='noreferrer' className='text-xl text-white flex items-center font-plex-hebrew mb-4 block md-max:text-base duration-300 hover:text-blue-300'>
             Linkedin
             <ArrowRightAngled className='inline-flex ml-6'/>
           </a>
-          <a href="https://www.google.com" target='_blank' rel='noreferrer' className='text-xl text-white font-plex-hebrew block md-max:text-base'>
+          <a href="https://www.google.com" target='_blank' rel='noreferrer' className='text-xl text-white flex items-center font-plex-hebrew block md-max:text-base duration-300 hover:text-blue-300'>
             Twitter
             <ArrowRightAngled className='inline-flex ml-6'/>
           </a>
