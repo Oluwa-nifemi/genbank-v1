@@ -47,7 +47,7 @@ const Footer = () => {
           <h5 className='text-xl font-light text-white font-plex-hebrew mb-6 md-max:text-base'>
             Resources
           </h5>
-          <a href="https://www.google.com" target='_blank' rel='noreferrer' className='text-xl text-white font-plex-hebrew mb-4 block md-max:text-base'>
+          <a href="https://genbank.medium.com/" target='_blank' rel='noreferrer' className='text-xl text-white font-plex-hebrew mb-4 block md-max:text-base'>
             Read
           </a>
           <a href="https://www.google.com" target='_blank' rel='noreferrer' className='text-xl text-white font-plex-hebrew block md-max:text-base'>
