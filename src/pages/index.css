@@ -12,6 +12,10 @@
   line-height: 3.9rem;
 }
 
+#features{
+  scroll-margin-top: 90px;
+}
+
 @media (max-width: 1024px) {
   .features{
     font-size: 9.7rem;
@@ -40,8 +44,9 @@
   }
 
   .first-section{
-    height: calc(100vh - 240px);
-    min-height: fit-content;
+    height: fit-content;
+    /*min-height: calc(100vh - 240px);*/
+    max-height: 800px;
   }
 
   .stayAhead{

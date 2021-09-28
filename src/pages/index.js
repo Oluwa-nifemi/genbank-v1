@@ -161,7 +161,7 @@ const IndexPage = () => {
             </div>
           </div>
           {/*Feature rows*/}
-          <div className='grid gap-y-28 lg-max:gap-y-18 sm-max:gap-y-10'>
+          <div className='grid gap-y-28 lg-max:gap-y-18 sm-max:gap-y-10' id='features'>
             {
               Array.from({length: 4}).map((_, index) => {
                 return (
