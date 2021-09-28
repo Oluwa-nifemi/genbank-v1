@@ -22,6 +22,11 @@
     line-height: 11.125rem;
   }
 
+  .stayAhead{
+    font-size: 1.625rem;
+    line-height: 2.125rem;
+  }
+
   .whatYouGet{
     top: unset;
     bottom: 0;
@@ -45,13 +50,7 @@
 
   .first-section{
     height: fit-content;
-    /*min-height: calc(100vh - 240px);*/
     max-height: 800px;
-  }
-
-  .stayAhead{
-    font-size: 1.625rem;
-    line-height: 2.125rem;
   }
 }
 

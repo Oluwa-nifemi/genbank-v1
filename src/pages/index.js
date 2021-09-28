@@ -190,12 +190,12 @@ const IndexPage = () => {
         </section>
         <section className="py-30 container md-max:py-20">
           <div
-            className="px-30 py-22.5 flex justify-between items-center bg-blue-500 rounded-2xl relative overflow-hidden md-max:flex-col md-max:py-10 md-max:px-6 md-max:items-start">
+            className="px-30 py-22.5 flex justify-between items-center bg-blue-500 rounded-2xl relative overflow-hidden lg-max:flex-col lg-max:py-10 lg-max:px-6 lg-max:items-start">
             <div className='z-10 md-max:mb-20'>
-              <h3 className="stayAhead text-white font-plex-hebrew md-max:mb-10 mb-4">
+              <h3 className="stayAhead text-white font-plex-hebrew lg-max:mb-10 mb-4">
                 Embrace the power of <br/> borderless banking.
               </h3>
-              <p className='text-description font-plex-hebrew text-white md-max:text-base md-max:mb-2.5'>
+              <p className='text-description font-plex-hebrew text-white lg-max:text-base lg-max:mb-2.5'>
                 Sign up for early access.
               </p>
             </div>
