@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Genbank`,
-    description: `Open a US Bank account from Nigeria or South Africa`,
+    description: `Open US Bank accounts from Nigeria or South Africa`,
     author: `@oluwa-nifemi`,
     siteUrl: `https://genbank-v1.netlify.app/`, //TODO: Rename on deploy
   },
