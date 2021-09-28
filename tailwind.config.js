@@ -58,6 +58,7 @@ module.exports = {
         'hero-mobile': [rem(48), rem(62)],
         'description': [rem(20), rem(26)],
         'feature-title': [rem(34), rem(44)],
+        'feature-title-m': [rem(22), rem(28)],
         'download-from': [rem(8), rem(10)],
       },
       opacity: {

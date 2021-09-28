@@ -13,7 +13,13 @@ const features = [
   {
     index: 1,
     title: "For Africans — Personal & Business",
-    text: "Own bank accounts in US dollars, provided by a US bank, FDIC member."
+    text: [
+      <span>
+        Open a <span className='text-blue-300'>Checking Account</span> for day to day transactions or high-yield interest bearing <span className='text-blue-300'>Savings Account</span>.
+      </span>,
+      "Send and receive payments from friends, family, clients, and others.",
+      "Spend, save, and invest safely and easily."
+    ]
   },
   {
     index: 2,
@@ -22,7 +28,13 @@ const features = [
         Checking <br /> Accounts
       </span>
     ),
-    text: "Easy receipts and withdrawals for daily transactions."
+    text: [
+      <span>
+        Powerful <span className="text-blue-300">US Business Checking</span> accounts for African businesses.
+      </span>,
+      "Transaction banking for payments and commercial trades settlements.",
+      "Treasury and liquidity management for short term benefits."
+    ]
   },
   null,
   null,
@@ -30,19 +42,19 @@ const features = [
     index: 3,
     title: (
       <span>
-        Savings <br /> Account
+        Compliance and <br/> Fraud Risk <br/>Management
       </span>
     ),
-    text: "Interest-bearing accounts with no monthly fees."
+    text: "Genbank upholds the highest standards of compliance and risk management. Our KYC/CIP and fraud risk management procedures are in line with global best practices."
   },
   {
     index: 4,
     title: (
       <span>
-        Prepaid Debit <br /> card
+        Security
       </span>
     ),
-    text: "Use online, in-store, POS, and ATM. Anywhere."
+    text: "Security of our customers and their money is topmost priority to Genbank. We invest in technology and other resources that help us protect our customers. Genbank accounts are covered up to $750,000 by FDIC."
   },
   {
     index: 5,
@@ -57,10 +69,13 @@ const features = [
     index: 6,
     title: (
       <span>
-        ACH and Domestic <br /> Wires
+        Wires and <br/> Transfers
       </span>
     ),
-    text: "Same day ACH transactions and wires to US-based accounts."
+    text: [
+      "Same day ACH transactions and wires to US-based accounts.",
+      "Send next-day transfers to non-US accounts to pay friends, family, or vendors."
+    ]
   },
   null,
   null,
@@ -68,30 +83,31 @@ const features = [
     index: 7,
     title: (
       <span>
-        Global <br /> transfers
+        Cards
       </span>
     ),
-    text: "Send next-day transfers to non-US accounts to pay friends, family, or vendors. "
+    text: "Prepaid Debit Card. Virtual + physical for online, in-store, POS, and ATMs."
   },
   {
     index: 8,
     title: (
       <span>
-        Bill <br /> pay
+        Bills
       </span>
     ),
-    text: "Pay millions of merchants through a Genbank account."
-  },
-  {
-    index: 9,
-    title: (
-      <span>
-        Security and <br />safety
-      </span>
-    ),
-    text: "Security is topmost priority. Deposits are FDIC-insured up to $750,000."
+    text: "Bill payment to millions of merchants and vendors worldwide through Genbank."
   }
 ]
+
+const getFeaturesRow = (row) => features.slice(row*3, 3 + row*3)
+
+const renderFeatureDescription = (text) => {
+  return (
+    <p className="text-xl md-max:text-base">
+      {[].concat(text).map(text => text)}
+    </p>
+  )
+}
 
 const IndexPage = () => {
   const onClickQualify = () => {
@@ -144,31 +160,32 @@ const IndexPage = () => {
               <ScrollIndicator />
             </div>
           </div>
-          <div
-            className="grid grid-rows-6 grid-cols-3 gap-x-24 gap-y-28 lg-max:grid-cols-2 lg-max:gap-y-18 lg-max:gap-x-16 lg-max:grid-rows-5 sm-max:flex sm-max:flex-col sm-max:gap-y-10">
+          {/*Feature rows*/}
+          <div className='grid gap-y-28 lg-max:gap-y-18 sm-max:gap-y-10'>
             {
-              features.map(feature => (
-                feature ? (
-                  <div className="text-white font-plex-hebrew">
-                    <h4 className="text-2xl mb-6">
-                      0{feature.index}/
-                    </h4>
-                    <h5 className="text-feature-title mb-12">
-                      {feature.title}
-                    </h5>
-                    <p className="text-xl">
-                      {feature.text}
-                    </p>
+              Array.from({length: 4}).map((_, index) => {
+                return (
+                  <div className="grid grid-cols-3 gap-x-24 lg-max:grid-cols-2 lg-max:gap-x-16 sm-max:flex sm-max:flex-col sm-max:gap-y-10">
+                    {
+                      getFeaturesRow(index).map(feature => (
+                        feature ? (
+                          <div className="text-white font-plex-hebrew">
+                            <h4 className="text-2xl mb-6 md-max:text-description md-max:mb-4">
+                              0{feature.index}/
+                            </h4>
+                            <h5 className="text-feature-title mb-12 md-max:text-feature-title-m md-max:mb-6">
+                              {feature.title}
+                            </h5>
+                            <div className='grid gap-y-4'>
+                              {[].concat(feature.text).map(renderFeatureDescription)}
+                            </div>
+                          </div>
+                        ) : <div className="lg-max:hidden" />))
+                    }
                   </div>
-                ) : <div className="lg-max:hidden" />
-              ))
+                )
+              })
             }
-            <StaticImage
-              src={"../assets/images/feature-image.png"}
-              alt="Features" //TODO: Maybe modify this when the designer changes the image
-              className="row-span-2 col-span-2 lg-max:hidden"
-              placeholder="none"
-            />
           </div>
         </section>
         <section className="py-30 container md-max:py-20">
