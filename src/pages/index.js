@@ -8,6 +8,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import Footer from "../components/footer/footer"
 import { navigate } from "gatsby"
 import Seo from "../components/seo"
+import Link from "gatsby-link"
 
 const features = [
   {
@@ -141,9 +142,9 @@ const IndexPage = () => {
             </Button>
           </div>
           <div className=''>
-            <span className='font-plex-hebrew text-xs text-white flex'>
+            <Link to='/#disclaimer' className='no-underline font-plex-hebrew text-xs text-white flex'>
               *See disclaimer below
-            </span>
+            </Link>
           </div>
           <div className="absolute right-30 bottom-4 md-max:hidden">
             <ScrollIndicator />
