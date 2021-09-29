@@ -6,14 +6,21 @@ import ScrollIndicator from "../components/scroll-indicator"
 import "./index.css"
 import { StaticImage } from "gatsby-plugin-image"
 import Footer from "../components/footer/footer"
-import { navigate } from "gatsby"
+import { navigate, Link } from "gatsby"
 import Seo from "../components/seo"
-import Link from "gatsby-link"
+import HandAroundWorldIcon from '../assets/images/hand-around-world.inline.svg'
+import SecurityIcon from '../assets/images/security.inline.svg'
+import WireTransferIcon from '../assets/images/wire-transfers.inline.svg'
+import CardsIcon from '../assets/images/cards.inline.svg'
 
 const features = [
   {
     index: 1,
-    title: "For Africans — Personal & Business",
+    title: (
+      <span>
+        Personal <br/> Banking
+      </span>
+    ),
     text: [
       <span>
         Open a <span className='text-blue-300'>Checking Account</span> for day to day transactions or high-yield interest bearing <span className='text-blue-300'>Savings Account</span>.
@@ -26,7 +33,7 @@ const features = [
     index: 2,
     title: (
       <span>
-        Checking <br /> Accounts
+        Business <br/> Banking
       </span>
     ),
     text: [
@@ -37,8 +44,14 @@ const features = [
       "Treasury and liquidity management for short term benefits."
     ]
   },
-  null,
-  null,
+  {
+    isIcon: true,
+    icon: HandAroundWorldIcon
+  },
+  {
+    isIcon: true,
+    icon: SecurityIcon
+  },
   {
     index: 3,
     title: (
@@ -78,8 +91,14 @@ const features = [
       "Send next-day transfers to non-US accounts to pay friends, family, or vendors."
     ]
   },
-  null,
-  null,
+  {
+    isIcon: true,
+    icon: WireTransferIcon
+  },
+  {
+    isIcon: true,
+    icon: CardsIcon
+  },
   {
     index: 7,
     title: (
@@ -113,6 +132,29 @@ const renderFeatureDescription = (text) => {
 const IndexPage = () => {
   const onClickQualify = () => {
     return navigate('/register')
+  }
+
+  const renderFeature = (feature) => {
+    if(feature.isIcon){
+      const Icon = feature.icon;
+
+      return <Icon width='100%' height='unset' className='lg-max:hidden'/>
+    }
+
+
+    return (
+      <div className="text-white font-plex-hebrew">
+        <h4 className="text-2xl mb-6 md-max:text-description md-max:mb-4">
+          0{feature.index}/
+        </h4>
+        <h5 className="text-feature-title mb-12 md-max:text-feature-title-m md-max:mb-6">
+          {feature.title}
+        </h5>
+        <div className='grid gap-y-4'>
+          {[].concat(feature.text).map(renderFeatureDescription)}
+        </div>
+      </div>
+    )
   }
 
   return (
@@ -164,20 +206,7 @@ const IndexPage = () => {
                 return (
                   <div className="grid grid-cols-3 gap-x-24 lg-max:grid-cols-2 lg-max:gap-x-16 sm-max:flex sm-max:flex-col sm-max:gap-y-10">
                     {
-                      getFeaturesRow(index).map(feature => (
-                        feature ? (
-                          <div className="text-white font-plex-hebrew">
-                            <h4 className="text-2xl mb-6 md-max:text-description md-max:mb-4">
-                              0{feature.index}/
-                            </h4>
-                            <h5 className="text-feature-title mb-12 md-max:text-feature-title-m md-max:mb-6">
-                              {feature.title}
-                            </h5>
-                            <div className='grid gap-y-4'>
-                              {[].concat(feature.text).map(renderFeatureDescription)}
-                            </div>
-                          </div>
-                        ) : <div className="lg-max:hidden" />))
+                      getFeaturesRow(index).map(renderFeature)
                     }
                   </div>
                 )
