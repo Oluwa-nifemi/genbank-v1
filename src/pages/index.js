@@ -129,21 +129,22 @@ const IndexPage = () => {
         </div>
         <section className="pt-28 container flex flex-col items-center first-section md-max:pt-12 relative">
           <h1
-            className="font-plex-serif text-hero font-medium mb-6 w-70% text-white text-center md-max:text-hero-mobile md-max:w-100% md-max:mb-10">
-            OPEN US BANK ACCOUNTS <br/> FROM <Typewriter />
+            className="font-plex-serif text-hero font-medium mb-6 w-246 text-white text-center md-max:text-hero-mobile md-max:w-100% md-max:mb-10">
+            OPEN AMERICAN BANK ACCOUNTS FROM <Typewriter />
           </h1>
-          <h3 className='font-plex-hebrew text-description mb-6 text-white w-55% text-center md-max:w-100%'>
-            Genbank offers best-in-class US banking services to African individuals and businesses with worldwide access.
+          <h3 className='font-plex-hebrew text-description mb-12 text-white w-146 text-center md-max:w-100%'>
+            Genbank offers best-in-class American Personal and Business Banking to Africans.
           </h3>
-          <h5 className={`
-          px-28 py-5 bg-blue-700 rounded-10 text-description text-white mb-20 bg-opacity-40 font-plex-hebrew backdrop-filter backdrop-blur-sm text-center
-          md-max:text-base md-max:px-9 md-max:py-4 md-max:mb-10
-        `}>
-            Enjoy borderless banking.
-          </h5>
-          <Button className="w-68.75" elevated onClick={onClickQualify}>
-            Pre-qualify
-          </Button>
+          <div className='mb-5'>
+            <Button className="w-68.75" elevated onClick={onClickQualify}>
+              Pre-qualify
+            </Button>
+          </div>
+          <div className=''>
+            <span className='font-plex-hebrew text-xs text-white flex'>
+              *See disclaimer below
+            </span>
+          </div>
           <div className="absolute right-30 bottom-4 md-max:hidden">
             <ScrollIndicator />
           </div>
