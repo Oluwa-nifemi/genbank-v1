@@ -133,7 +133,7 @@ const IndexPage = () => {
             className="font-plex-serif text-hero font-medium mb-6 w-246 text-white text-center md-max:text-hero-mobile md-max:w-100% md-max:mb-10">
             OPEN AMERICAN BANK ACCOUNTS FROM <Typewriter />
           </h1>
-          <h3 className='font-plex-hebrew text-description mb-12 text-white w-146 text-center md-max:w-100%'>
+          <h3 className='font-plex-hebrew text-description mb-12 text-white w-146 text-center md-max:w-100% md-max:text-base'>
             Genbank offers best-in-class American Personal and Business Banking to Africans.
           </h3>
           <div className='mb-5'>

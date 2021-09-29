@@ -151,9 +151,12 @@ const Register = () => {
         {
           formik => (
             <>
-              <h1 className="formHeader text-white font-plex-serif mb-8">
-                Pre-qualification form
+              <h1 className="formHeader text-white font-plex-serif mb-4">
+                Sign up to be prequalified
               </h1>
+              <p className='mb-12 text-xl font-plex-hebrew text-white md-max:text-base'>
+                ...and get early access.
+              </p>
               <div
                 className="grid grid-cols-2 gap-x-8 gap-y-10 mb-10 w-55% lg-max:w-80% md-max:w-100% md-max:px-6 md-max:grid-cols-1 md-max:gap-x-6">
                 <Input
@@ -197,7 +200,7 @@ const Register = () => {
                   onClick={formik.handleSubmit}
                   disabled={!agree}
                 >
-                  Pre-qualify
+                  Submit
                 </Button>
               </div>
             </>
