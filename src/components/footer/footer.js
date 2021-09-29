@@ -58,12 +58,16 @@ const Footer = () => {
           <h5 className='text-xl font-light text-white font-plex-hebrew mb-6 md-max:text-base'>
             Connect with us:
           </h5>
-          <a href="https://www.google.com" target='_blank' rel='noreferrer' className='text-xl text-white flex items-center font-plex-hebrew mb-4 block md-max:text-base duration-300 hover:text-blue-300'>
+          <a href="https://www.linkedin.com/company/genbankus/" target='_blank' rel='noreferrer' className='text-xl text-white flex items-center font-plex-hebrew mb-4 block md-max:text-base duration-300 hover:text-blue-300'>
             Linkedin
             <ArrowRightAngled className='inline-flex ml-6'/>
           </a>
-          <a href="https://www.google.com" target='_blank' rel='noreferrer' className='text-xl text-white flex items-center font-plex-hebrew block md-max:text-base duration-300 hover:text-blue-300'>
+          <a href="https://twitter.com/GenbankUS" target='_blank' rel='noreferrer' className='text-xl text-white flex items-center font-plex-hebrew mb-4 block md-max:text-base duration-300 hover:text-blue-300'>
             Twitter
+            <ArrowRightAngled className='inline-flex ml-6'/>
+          </a>
+          <a href="https://www.instagram.com/genbankus/" target='_blank' rel='noreferrer' className='text-xl text-white flex items-center font-plex-hebrew block md-max:text-base duration-300 hover:text-blue-300'>
+            Instagram
             <ArrowRightAngled className='inline-flex ml-6'/>
           </a>
         </div>
