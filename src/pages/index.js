@@ -119,6 +119,7 @@ const IndexPage = () => {
     <>
       <Seo title='Home'/>
       <Header />
+      <ScrollIndicator />
       <main className="relative overflow-hidden pt-20">
         <div className="absolute w-full top-20 left-0 pointer-events-none md-max:hidden">
           <StaticImage
@@ -146,9 +147,6 @@ const IndexPage = () => {
               *See disclaimer below
             </Link>
           </div>
-          <div className="absolute right-30 bottom-4 md-max:hidden">
-            <ScrollIndicator />
-          </div>
         </section>
         <section className="pt-12 container mb-30">
           <div className="relative font-plex-serif lg-max:mb-10">
@@ -158,9 +156,6 @@ const IndexPage = () => {
             <h4 className="text-blue-300 text-8xl absolute top-24 left-36% whatYouGet">
               What you get
             </h4>
-            <div className="md:hidden absolute right-0 bottom-0">
-              <ScrollIndicator />
-            </div>
           </div>
           {/*Feature rows*/}
           <div className='grid gap-y-28 lg-max:gap-y-18 sm-max:gap-y-10' id='features'>

@@ -21,6 +21,10 @@ body {
   position: relative;
 }
 
+.container.fixed{
+  position: fixed;
+}
+
 @media (max-width: 786px) {
   .container{
     padding-left: 24px;

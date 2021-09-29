@@ -8,7 +8,7 @@ const ScrollIndicator = () => {
       to='/#features'
       className={`
         bg-white backdrop-filter backdrop-blur-sm w-24 h-24 bg-opacity-12 rounded-half flex flex-col items-center justify-center border-none
-        md-max:w-20 md-max:h-20 no-underline
+        md-max:w-20 md-max:h-20 no-underline fixed bottom-4 right-30 z-50 md-max:right-6
       `}
     >
       <span className='text-base text-white font-plex-hebrew mb-1 w-11 md-max:text-sm text-center'>
