@@ -79,7 +79,7 @@ const extractPhoneNumber = ({ country, number }) => {
 
 const Register = () => {
   const [agree, setAgree] = useState(false)
-  const [formState, setFormState] = useState(formStates.SUCCESS);
+  const [formState, setFormState] = useState(formStates.IDLE);
 
   const isLoading = formState === formStates.LOADING;
   const isSuccess = formState === formStates.SUCCESS;
@@ -137,7 +137,7 @@ const Register = () => {
         <h3 className="formHeader font-plex-hebrew text-white mb-4 relative md-max:-top-6">
           Congratulations!
         </h3>
-        <p className="text-xl md:text-base font-plex-hebrew text-white text-center relative md-max:-top-6">
+        <p className="text-xl md:text-base font-plex-hebrew text-white text-center relative md-max:-top-6 md-max:px-6 mx-auto">
           You are prequalified and have been signed up for early access.
         </p>
       </div>
