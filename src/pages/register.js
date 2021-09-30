@@ -187,7 +187,7 @@ const Register = () => {
                   name="Agree"
                   label={
                     <>
-                      By signing up, I agree to Genbank Financial, LLC’s <Link to='/register#disclaimer' className='font-bold'>Terms and Conditions.</Link>
+                      By signing up, I agree to Genbank Financial, LLC’s <Link to='/register#disclaimer' className='hover:text-blue-300 duration-300 font-bold'>Terms and Conditions.</Link>
                     </>
                   }
                 />
@@ -212,7 +212,7 @@ const Register = () => {
 
   return (
     <>
-      <Seo title='Pre-qualify'/>
+      <Seo title='Register'/>
       <Header hasBackButton />
       <main className="relative overflow-hidden pb-56 md-max:pb-40 pt-20">
         <div className="absolute w-full top-20 left-0 pointer-events-none md-max:hidden">
