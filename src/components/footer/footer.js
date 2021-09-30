@@ -99,7 +99,7 @@ const Footer = () => {
         </p>
       </div>
       <p className='text-xs font-plex-hebrew text-white text-center'>
-        Copyright © Genbank Financial, LLC, {new Date().getFullYear()}. All rights reserved
+        Copyright © Genbank Financial, LLC, {new Date().getFullYear()}. All rights reserved.
       </p>
     </footer>
   )

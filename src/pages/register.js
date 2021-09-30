@@ -155,7 +155,7 @@ const Register = () => {
                 Sign up to be prequalified
               </h1>
               <p className='mb-12 text-xl font-plex-hebrew text-white md-max:text-base'>
-                ...and get early access.
+                Get early access
               </p>
               <div
                 className="grid grid-cols-2 gap-x-8 gap-y-10 mb-10 w-55% lg-max:w-80% md-max:w-100% md-max:px-6 md-max:grid-cols-1 md-max:gap-x-6">
