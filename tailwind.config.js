@@ -37,7 +37,8 @@ module.exports = {
     },
     extend: {
       maxWidth: {
-        '100%': '100%'
+        '100%': '100%',
+        '67.5': rem(270)
       },
       borderRadius: {
         10: rem(40),
@@ -79,6 +80,7 @@ module.exports = {
         '22.5': rem(90),
         '3.5': rem(14),
         '4.75': rem(19),
+        '94.5': rem(378),
         'unset': 'unset'
       },
       zIndex: {

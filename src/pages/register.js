@@ -18,6 +18,7 @@ import { Formik } from "formik"
 import * as Yup from "yup"
 import { isValidPhoneNumber } from "libphonenumber-js"
 import { toast } from "react-toastify"
+import { classNames } from "../util/functions"
 
 const defaultOptions = {
   loop: false,
@@ -126,15 +127,17 @@ const Register = () => {
   const renderSuccess = () => {
     return (
       <div className="flex items-center flex-col">
-        <Lottie
-          options={defaultOptions}
-          height={378}
-          width={378}
-        />
-        <h3 className="formHeader font-plex-hebrew text-white mb-4">
+        <div className='w-94.5 md-max:max-w-67.5 md-max:w-100%'>
+          <Lottie
+            options={defaultOptions}
+            height={'100%'}
+            width={'100%'}
+          />
+        </div>
+        <h3 className="formHeader font-plex-hebrew text-white mb-4 relative md-max:-top-6">
           Congratulations!
         </h3>
-        <p className="text-xl md:text-base font-plex-hebrew text-white text-center">
+        <p className="text-xl md:text-base font-plex-hebrew text-white text-center relative md-max:-top-6">
           You are prequalified and have been signed up for early access.
         </p>
       </div>
@@ -223,7 +226,7 @@ const Register = () => {
             alt="Background pattern"
           />
         </div>
-        <section className="pt-28 flex flex-col items-center md-max:pt-12">
+        <section className={classNames("flex flex-col items-center", formState !== formStates.SUCCESS && 'pt-28 md-max:pt-12')}>
           {isSuccess ? renderSuccess() : renderForm()}
         </section>
       </main>
