@@ -50,7 +50,7 @@ const Footer = () => {
           <a href="https://genbank.medium.com/" target='_blank' rel='noreferrer' className='text-xl text-white font-plex-hebrew mb-4 block md-max:text-base duration-300 hover:text-blue-300'>
             Read
           </a>
-          <a href="https://www.google.com" target='_blank' rel='noreferrer' className='text-xl text-white font-plex-hebrew block md-max:text-base duration-300 hover:text-blue-300'>
+          <a href="https://decisive-yuzu-cda.notion.site/Genbank-Careers-0bcefebcbaf2460fb07d1b54fb7220c6" target='_blank' rel='noreferrer' className='text-xl text-white font-plex-hebrew block md-max:text-base duration-300 hover:text-blue-300'>
             Career
           </a>
         </div>
