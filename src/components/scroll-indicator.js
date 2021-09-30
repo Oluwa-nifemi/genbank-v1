@@ -10,7 +10,7 @@ const ScrollIndicator = () => {
     scrollListener.current = () => {
       const scrolledDistance = window.innerHeight + window.scrollY
 
-      setIsAtBottom(scrolledDistance > document.body.offsetHeight)
+      setIsAtBottom(Math.abs(scrolledDistance - document.body.offsetHeight) < 100)
     };
 
     window.addEventListener('scroll', scrollListener.current)
@@ -27,14 +27,12 @@ const ScrollIndicator = () => {
         left: 0,
         behavior: 'smooth'
       })
-      setIsAtBottom(false)
     }else{
       window.scrollTo({
         top: document.body.scrollHeight,
         left: 0,
         behavior: 'smooth'
       })
-      setIsAtBottom(true)
     }
   }
   return (
