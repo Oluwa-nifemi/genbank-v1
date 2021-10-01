@@ -16,7 +16,20 @@
   scroll-margin-top: 90px;
 }
 
+.imagesRow{
+  grid-template-columns: 1.148809524fr 1fr 1.309815951fr;
+}
+
 @media (max-width: 1024px) {
+  .imagesRow{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .noIpadPadding{
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+
   .features{
     font-size: 9.7rem;
     line-height: 11.125rem;

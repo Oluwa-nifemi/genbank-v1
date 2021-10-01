@@ -12,6 +12,7 @@ import HandAroundWorldIcon from '../assets/images/hand-around-world.inline.svg'
 import SecurityIcon from '../assets/images/security.inline.svg'
 import WireTransferIcon from '../assets/images/wire-transfers.inline.svg'
 import CardsIcon from '../assets/images/cards.inline.svg'
+import { classNames } from "../util/functions"
 
 const features = [
   {
@@ -27,7 +28,11 @@ const features = [
       </span>,
       "Send and receive payments from friends, family, clients, and others.",
       "Spend, save, and invest safely and easily."
-    ]
+    ],
+    style: {
+      paddingRight: '2.013888889vw'
+    },
+    className: 'noIpadPadding'
   },
   {
     index: 2,
@@ -50,7 +55,10 @@ const features = [
   },
   {
     isIcon: true,
-    icon: SecurityIcon
+    icon: SecurityIcon,
+    style: {
+      paddingRight: '4.166666667vw'
+    }
   },
   {
     index: 3,
@@ -68,7 +76,11 @@ const features = [
         Security
       </span>
     ),
-    text: "Security of our customers and their money is topmost priority to Genbank. We invest in technology and other resources that help us protect our customers. Genbank accounts are covered up to $750,000 by FDIC."
+    text: "Security of our customers and their money is topmost priority to Genbank. We invest in technology and other resources that help us protect our customers. Genbank accounts are covered up to $750,000 by FDIC.",
+    style: {
+      paddingLeft: '5.7638889vw'
+    },
+    className: 'noIpadPadding'
   },
   {
     index: 5,
@@ -77,7 +89,11 @@ const features = [
         Cash <br /> Access
       </span>
     ),
-    text: "Deposit or withdraw your cash from ATMs anywhere in the world."
+    text: "Deposit or withdraw your cash from ATMs anywhere in the world.",
+    style: {
+      paddingRight: '2.013888889vw'
+    },
+    className: 'noIpadPadding'
   },
   {
     index: 6,
@@ -97,7 +113,10 @@ const features = [
   },
   {
     isIcon: true,
-    icon: CardsIcon
+    icon: CardsIcon,
+    style: {
+      paddingRight: '3.402777778vw'
+    }
   },
   {
     index: 7,
@@ -106,7 +125,8 @@ const features = [
         Cards
       </span>
     ),
-    text: "Prepaid Debit Card. Virtual + physical for online, in-store, POS, and ATMs."
+    text: "Prepaid Debit Card. Virtual + physical for online, in-store, POS, and ATMs.",
+    className: 'mt-16 lg-max:mt-0'
   },
   {
     index: 8,
@@ -115,8 +135,18 @@ const features = [
         Bills
       </span>
     ),
-    text: "Bill payment to millions of merchants and vendors worldwide through Genbank."
+    text: "Bill payment to millions of merchants and vendors worldwide through Genbank.",
+    style: {
+      paddingLeft: '5.7638889vw'
+    },
+    className: 'mt-16 lg-max:mt-0 noIpadPadding'
   }
+]
+
+const rowClassName = [
+  'mb-20 lg-max:mb-0',
+  'mb-20 lg-max:mb-0',
+  'mb-4 lg-max:mb-0',
 ]
 
 const getFeaturesRow = (row) => features.slice(row*3, 3 + row*3)
@@ -134,20 +164,26 @@ const IndexPage = () => {
     return navigate('/register')
   }
 
-  const renderFeature = (feature) => {
+  const renderFeature = (feature, index) => {
     if(feature.isIcon){
       const Icon = feature.icon;
 
       return (
-        <div className='flex items-center justify-between'>
-          <Icon width='140%' height='unset' className='lg-max:hidden'/>
+        <div
+          className='flex items-center justify-between flex-1 lg-max:hidden'
+          style={feature.style}
+        >
+          <Icon width='100%' height='unset' className='lg-max:hidden'/>
         </div>
       )
     }
 
 
     return (
-      <div className="text-white font-plex-hebrew">
+      <div
+        className={classNames("text-white font-plex-hebrew flex-1", index === 0 && 'pr-7.25 md-max:pr-0', feature.className)}
+        style={feature.style}
+      >
         <h4 className="text-2xl mb-6 md-max:text-description md-max:mb-4">
           0{feature.index}/
         </h4>
@@ -204,11 +240,11 @@ const IndexPage = () => {
             </h4>
           </div>
           {/*Feature rows*/}
-          <div className='grid gap-y-28 lg-max:gap-y-18 sm-max:gap-y-10' id='features'>
+          <div className='grid lg-max:gap-y-18 sm-max:gap-y-10' id='features'>
             {
               Array.from({length: 4}).map((_, index) => {
                 return (
-                  <div className="grid grid-cols-3 gap-x-24 lg-max:grid-cols-2 lg-max:gap-x-16 sm-max:flex sm-max:flex-col sm-max:gap-y-10">
+                  <div className={classNames("grid imagesRow gap-x-11.5 lg-max:grid-cols-2 lg-max:gap-x-16 sm-max:flex sm-max:flex-col sm-max:gap-y-10", rowClassName[index])}>
                     {
                       getFeaturesRow(index).map(renderFeature)
                     }
