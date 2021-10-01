@@ -8,3 +8,13 @@ export const postData = async (formData) => {
     }
   )
 }
+
+export const sendEmail = async ({ firstName, targetEmail }) => {
+  await axios.post(
+    '/.netlify/functions/send-contact-email',
+    {
+      firstName,
+      targetEmail
+    }
+  )
+}

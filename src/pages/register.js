@@ -12,7 +12,7 @@ import Lottie from "react-lottie"
 import successAnimation from "../assets/animations/success-form.json"
 import { Link } from "gatsby"
 import Seo from "../components/seo"
-import { postData } from "../api/api"
+import { postData, sendEmail } from "../api/api"
 import emailjs from "emailjs-com"
 import { Formik } from "formik"
 import * as Yup from "yup"
@@ -98,17 +98,23 @@ const Register = () => {
 
       await postData(formData)
 
-      emailjs.init(process.env.GATSBY_EMAILJS_USERID)
 
-      await emailjs.send(
-        process.env.GATSBY_EMAILJS_SERVICEID,
-        process.env.GATSBY_EMAILJS_TEMPLATEID,
-        {
-          to_email: formData.email,
-          name: formData.firstName,
-          full_name: `${formData.firstName} ${formData.lastName}`,
-        }
-      )
+      await sendEmail({
+        firstName: formData.firstName,
+        targetEmail: formData.email,
+      })
+
+      // emailjs.init(process.env.GATSBY_EMAILJS_USERID)
+      //
+      // await emailjs.send(
+      //   process.env.GATSBY_EMAILJS_SERVICEID,
+      //   process.env.GATSBY_EMAILJS_TEMPLATEID,
+      //   {
+      //     to_email: formData.email,
+      //     name: formData.firstName,
+      //     full_name: `${formData.firstName} ${formData.lastName}`,
+      //   }
+      // )
 
       setFormState(formStates.SUCCESS)
 

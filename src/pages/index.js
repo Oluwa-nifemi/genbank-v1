@@ -138,7 +138,11 @@ const IndexPage = () => {
     if(feature.isIcon){
       const Icon = feature.icon;
 
-      return <Icon width='100%' height='unset' className='lg-max:hidden'/>
+      return (
+        <div className='flex items-center justify-between'>
+          <Icon width='140%' height='unset' className='lg-max:hidden'/>
+        </div>
+      )
     }
 
 
