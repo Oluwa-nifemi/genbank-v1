@@ -22,7 +22,7 @@ exports.template = `
       }</style><style media="screen and (min-width:480px)">.moz-text-html .mj-column-per-100 { width:100% !important; max-width: 100%; }
 .moz-text-html .mj-column-per-50 { width:50% !important; max-width: 50%; }</style><style type="text/css"></style><style type="text/css">@media all and (max-width: 590px) {
                 .title div {
-                  font-size: 18px !important;
+                  font-size: 16px !important;
                 }
 
                 .body-text div{
