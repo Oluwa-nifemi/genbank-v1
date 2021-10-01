@@ -4,7 +4,7 @@
     functions = "functions"
 
 [context.production]
-    environment = { GATSBY_EMAILJS_SERVICEID= "service_810h77l", GATSBY_EMAILJS_TEMPLATEID= "template_o887jjv", GATSBY_EMAILJS_USERID= "user_vLafsuBtO4IySDeBwLAuR", GATSBY_SHEET_LINK= "https://script.google.com/macros/s/AKfycbzgNeTn25D6r49hmqV-oUHS0WDJidbgZggmQ9e0pmqq9Q3TLqbQV9BFtAlpB2MyNRCj/exec", SENDGRID_API_KEY= "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"}
+    environment = { GATSBY_EMAILJS_SERVICEID= "service_810h77l", GATSBY_EMAILJS_TEMPLATEID= "template_o887jjv", GATSBY_EMAILJS_USERID= "user_vLafsuBtO4IySDeBwLAuR", GATSBY_SHEET_LINK= "https://script.google.com/macros/s/AKfycbzgNeTn25D6r49hmqV-oUHS0WDJidbgZggmQ9e0pmqq9Q3TLqbQV9BFtAlpB2MyNRCj/exec", SENDINBLUE_API_KEY= "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"}
 
 [dev]
     command= "npm run start"

@@ -97,23 +97,10 @@ const Register = () => {
 
       await postData(formData)
 
-
       await sendEmail({
         firstName: formData.firstName,
         targetEmail: formData.email,
       })
-
-      // emailjs.init(process.env.GATSBY_EMAILJS_USERID)
-      //
-      // await emailjs.send(
-      //   process.env.GATSBY_EMAILJS_SERVICEID,
-      //   process.env.GATSBY_EMAILJS_TEMPLATEID,
-      //   {
-      //     to_email: formData.email,
-      //     name: formData.firstName,
-      //     full_name: `${formData.firstName} ${formData.lastName}`,
-      //   }
-      // )
 
       setFormState(formStates.SUCCESS)
 
@@ -205,7 +192,10 @@ const Register = () => {
                   loading={isLoading}
                   elevated
                   className="w-68.75"
-                  onClick={formik.handleSubmit}
+                  type="button"
+                  onClick={() => {
+                    formik.handleSubmit()
+                  }}
                   disabled={!agree}
                 >
                   Submit

@@ -17,7 +17,7 @@ const getElevationClass = ({hasWhiteBackground, isDisabled}) => {
   return "border-blue-400 group-hover:border-white"
 }
 
-const Button = ({ children, className, elevated, hasWhiteBackground, onClick, largeButton = true, loading, disabled, isLink, to }) => {
+const Button = ({ children, className, elevated, hasWhiteBackground, onClick, largeButton = true, loading, disabled, isLink, to, type }) => {
   const colorsClasses = {
     button: hasWhiteBackground ? "text-blue-400 bg-white white-button" : "text-blue-100 bg-blue-400",
     arrow: hasWhiteBackground ? "text-blue-400" : "text-white",
@@ -83,6 +83,7 @@ const Button = ({ children, className, elevated, hasWhiteBackground, onClick, la
         }
         disabled={loading || disabled}
         onClick={onClick}
+        type="button"
       >
         {renderContent()}
       </button>
