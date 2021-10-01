@@ -1,5 +1,4 @@
 import React from "react"
-import logoIcon from "../../assets/images/logo.png"
 import PlayStoreIcon from "../../assets/images/play-store.inline.svg"
 import AppleStoreIcon from "../../assets/images/apple.inline.svg"
 import ArrowRightAngled from '../../assets/images/arrow-angled-right.inline.svg'

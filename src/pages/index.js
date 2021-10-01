@@ -6,7 +6,7 @@ import ScrollIndicator from "../components/scroll-indicator"
 import "./index.css"
 import { StaticImage } from "gatsby-plugin-image"
 import Footer from "../components/footer/footer"
-import { navigate, Link } from "gatsby"
+import { Link } from "gatsby"
 import Seo from "../components/seo"
 import HandAroundWorldIcon from '../assets/images/hand-around-world.inline.svg'
 import SecurityIcon from '../assets/images/security.inline.svg'

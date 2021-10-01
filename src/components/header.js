@@ -1,5 +1,4 @@
 import React from "react"
-import logoIcon from "../assets/images/logo.png"
 import Button from "./button/button"
 import { Link, navigate } from "gatsby"
 import CloseIcon from '../assets/images/close.inline.svg'
