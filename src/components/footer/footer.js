@@ -95,7 +95,7 @@ const Footer = () => {
           </span>
         </p>
         <p className='mb-4'>
-          Genbank is a financial technology company, not a bank. All banking services will be provided by partner bank, FDIC members. Genbank is currently not available for use. Genbank Financial, LLC is duly incorporated in the United States of America and is in compliance with all regulatory requirements. Genbank will be available for use from January 2022.
+          Genbank is a financial technology company, not a bank. All banking services will be provided by partner bank, FDIC members. Genbank is currently not available for use. Genbank Financial, LLC is duly incorporated in the United States of America and is in compliance with all regulatory requirements.
         </p>
         <p className='mb-4'>
           By completing the prequalification form, you agree to be considered to open and manage a Genbank account in the future. You also agree that your information can be used by Genbank Financial, LLC for establishing a banking relationship with you. You can opt out of our marketing communications list. We will not share your information with any 3rd parties and you can opt out anytime through any of our communications.
