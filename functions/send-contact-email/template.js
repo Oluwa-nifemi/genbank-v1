@@ -480,13 +480,13 @@ exports.template = `
                   >
                     <tbody>
                     <a href="https://twitter.com/GenbankUS" style="text-decoration: none">
-                      <img src="https://res.cloudinary.com/dpgdjfckl/image/upload/v1633044277/genbank/twitter_eddrld.svg" alt="Genbank Twitter" style="padding-left: 50px; padding-right: 27px">
+                      <img src="https://res.cloudinary.com/dpgdjfckl/image/upload/v1633044277/genbank/twitter_eddrld.png" alt="Genbank Twitter" style="padding-left: 50px; padding-right: 27px">
                     </a>
                     <a href="https://www.instagram.com/genbankus/" style="text-decoration: none">
-                      <img src="https://res.cloudinary.com/dpgdjfckl/image/upload/v1633044277/genbank/instagram_kmkcqc.svg" alt="Genbank Instagram" style="padding-right: 27px">
+                      <img src="https://res.cloudinary.com/dpgdjfckl/image/upload/v1633044277/genbank/instagram_kmkcqc.png" alt="Genbank Instagram" style="padding-right: 27px">
                     </a>
                     <a href="https://www.linkedin.com/company/genbankus/" style="text-decoration: none">
-                      <img src="https://res.cloudinary.com/dpgdjfckl/image/upload/v1633044066/genbank/linkedin_ofpoxs.svg" alt="Genbank LinkedIn">
+                      <img src="https://res.cloudinary.com/dpgdjfckl/image/upload/v1633044066/genbank/linkedin_ofpoxs.png" alt="Genbank LinkedIn">
                     </a>
                     </tbody>
                   </table>
