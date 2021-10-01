@@ -3,6 +3,16 @@
         <mj-preview>Congratulations {first_name}</mj-preview>
         <mj-raw>
             <style type="text/css">
+              @media all and (max-width: 590px) {
+                .title div {
+                  font-size: 18px !important;
+                }
+
+                .body-text div{
+                    font-size: 14px !important;
+                }
+              }
+
               @media screen {
                 @font-face {
                   font-family: 'Plex-Hebrew-Semibold';
@@ -43,27 +53,27 @@
         <mj-section padding="0 4% 0 4%">
             <mj-column background-color="white" padding="32px 4% 0px 4%">
                 <mj-text padding="0 0 16px 0" color="#011B49" font-size="20px" font-family="Plex-Hebrew-Semibold"
-                         line-height="1.5">
+                         line-height="1.5" css-class="title">
                     🎉 Congratulations {first_name}
                 </mj-text>
-                <mj-text padding="0 0 8px 0" color="#000E25" font-size="16px" font-family="Plex-Hebrew">
+                <mj-text padding="0 0 8px 0" color="#000E25" font-size="16px" css-class="body-text" font-family="Plex-Hebrew">
                     You have been pre-qualified for Genbank.
                 </mj-text>
-                <mj-text padding="0 0 8px 0" color="#000E25" font-size="16px" font-family="Plex-Hebrew">
+                <mj-text padding="0 0 8px 0" color="#000E25" font-size="16px" css-class="body-text" font-family="Plex-Hebrew">
                     Genbank is a financial technology company with the first and best-in-class American banking services
                     for Africans. Our vision is to be a leading provider of borderless financial solutions.
                 </mj-text>
-                <mj-text padding="0 0 8px 0" color="#000E25" font-size="16px" font-family="Plex-Hebrew">
+                <mj-text padding="0 0 8px 0" color="#000E25" font-size="16px" css-class="body-text" font-family="Plex-Hebrew">
                     We are currently building and looking forward to serving you. You will be notified once Genbank is
                     ready for your use.
                 </mj-text>
-                <mj-text padding="0 0 16px 0" color="#000E25" font-size="16px" font-family="Plex-Hebrew">
+                <mj-text padding="0 0 16px 0" color="#000E25" font-size="16px" css-class="body-text" font-family="Plex-Hebrew">
                     Best regards,
                 </mj-text>
-                <mj-text padding="0 0 4px 0" color="#000E25" font-size="16px" font-family="Plex-Serif">
+                <mj-text padding="0 0 4px 0" color="#000E25" font-size="16px" css-class="body-text" font-family="Plex-Serif">
                     Ayo Allu
                 </mj-text>
-                <mj-text padding="0 0 32px 0" color="#000E25" font-size="16px" font-family="Plex-Hebrew">
+                <mj-text padding="0 0 32px 0" color="#000E25" font-size="16px" css-class="body-text" font-family="Plex-Hebrew">
                     Chief Executive
                 </mj-text>
             </mj-column>
