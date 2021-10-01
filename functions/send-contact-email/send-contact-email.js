@@ -20,7 +20,7 @@ exports.handler = async (event) => {
     to: data.targetEmail,
     from: 'deyeminifemi@gmail.com',
     subject: `Welcome to Genbank ${data.firstName}!`,
-    html: template.replaceAll('{first_name}', data.firstName),
+    html: template.replace(/{first_name}/g, data.firstName),
   }
 
   try{
