@@ -210,7 +210,7 @@ const Register = () => {
 
   return (
     <>
-      <Seo title='Register'/>
+      <Seo title='Genbank | Prequalify'/>
       <Header hasBackButton />
       <main className="relative overflow-hidden pb-56 md-max:pb-40 pt-20">
         <div className="absolute w-full top-20 left-0 pointer-events-none md-max:hidden">

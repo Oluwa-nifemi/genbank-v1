@@ -195,7 +195,7 @@ const IndexPage = () => {
 
   return (
     <>
-      <Seo title='Home'/>
+      <Seo title='Genbank'/>
       <Header />
       <ScrollIndicator />
       <main className="relative overflow-hidden pt-20">
