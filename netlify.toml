@@ -1,0 +1,13 @@
+[build]
+    publish = "public"
+    command = "npm run build"
+    functions = "functions"
+
+[context.production]
+    environment = { GATSBY_EMAILJS_SERVICEID= "service_810h77l", GATSBY_EMAILJS_TEMPLATEID= "template_o887jjv", GATSBY_EMAILJS_USERID= "user_vLafsuBtO4IySDeBwLAuR", GATSBY_SHEET_LINK= "https://script.google.com/macros/s/AKfycbzgNeTn25D6r49hmqV-oUHS0WDJidbgZggmQ9e0pmqq9Q3TLqbQV9BFtAlpB2MyNRCj/exec"}
+
+[dev]
+    command= "npm run start"
+
+[functions]
+    directory = "/functions"
