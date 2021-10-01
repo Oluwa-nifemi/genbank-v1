@@ -1,5 +1,5 @@
 import React from "react"
-import LogoIcon from "../assets/images/logo.inline.svg"
+import logoIcon from "../assets/images/logo.png"
 import Button from "./button/button"
 import { Link, navigate } from "gatsby"
 import CloseIcon from '../assets/images/close.inline.svg'
@@ -16,7 +16,7 @@ const Header = ({ hasBackButton }) => {
   return (
     <header className='container h-20 flex justify-between items-center bg-blue-1000 bg-opacity-48 fixed z-50 backdrop-filter backdrop-blur-md'>
       <Link to='/'>
-        <LogoIcon/>
+        <img src={logoIcon} alt="Logo" />
       </Link>
       {
         hasBackButton ? (

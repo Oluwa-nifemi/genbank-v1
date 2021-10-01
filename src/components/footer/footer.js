@@ -1,9 +1,10 @@
 import React from "react"
-import LogoIcon from "../../assets/images/logo.inline.svg"
+import logoIcon from "../../assets/images/logo.png"
 import PlayStoreIcon from "../../assets/images/play-store.inline.svg"
 import AppleStoreIcon from "../../assets/images/apple.inline.svg"
 import ArrowRightAngled from '../../assets/images/arrow-angled-right.inline.svg'
 import './footer.css'
+import { Link } from "gatsby"
 
 const DownloadCard = ({ icon: Icon, topText, destination }) => {
   return (
@@ -26,7 +27,9 @@ const Footer = () => {
     <footer className='container py-10 bg-footer-background'>
       <div className='flex items-start mb-20 flex-wrap lg-max:flex-col lg-max:gap-y-10'>
         <div>
-          <LogoIcon className='mb-4'/>
+          <Link to='/'>
+            <img src={logoIcon} alt="Logo" />
+          </Link>
           <p className='text-white font-plex-hebrew text-base mb-10'>
             Bank in US
           </p>
