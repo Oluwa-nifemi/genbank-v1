@@ -160,10 +160,6 @@ const renderFeatureDescription = (text) => {
 }
 
 const IndexPage = () => {
-  const onClickQualify = () => {
-    return navigate('/register')
-  }
-
   const renderFeature = (feature, index) => {
     if(feature.isIcon){
       const Icon = feature.icon;
@@ -220,7 +216,7 @@ const IndexPage = () => {
             Genbank offers best-in-class American Personal and Business Banking to Africans.
           </h3>
           <div className='mb-5'>
-            <Button className="w-68.75" elevated onClick={onClickQualify}>
+            <Button className="w-68.75" elevated isLink to='/register'>
               Pre-qualify
             </Button>
           </div>
@@ -269,7 +265,8 @@ const IndexPage = () => {
               hasWhiteBackground
               className="w-68.75 z-10"
               elevated
-              onClick={onClickQualify}
+              isLink
+              to='/register'
             >
               Pre-qualify
             </Button>
