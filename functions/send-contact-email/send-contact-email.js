@@ -6,7 +6,6 @@ const { template } = require('./template')
 sendgrid.setApiKey(SENDGRID_API_KEY)
 
 exports.handler = async (event) => {
-  console.log(SENDGRID_API_KEY, 's')
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method Not Allowed', headers: { 'Allow': 'POST' } }
   }
@@ -16,6 +15,7 @@ exports.handler = async (event) => {
     return { statusCode: 422, body: 'Name, email, and message are required.' }
   }
 
+  console.log(template, typeof template)
   const msg = {
     to: data.targetEmail,
     from: 'deyeminifemi@gmail.com',
