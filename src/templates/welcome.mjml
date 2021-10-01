@@ -1,74 +1,111 @@
 <mjml>
     <mj-head>
         <mj-preview>Congratulations {first_name}</mj-preview>
+        <mj-raw>
+            <style type="text/css">
+              @media screen {
+                @font-face {
+                  font-family: 'Plex-Hebrew-Semibold';
+                  font-style: normal;
+                  font-weight: 400;
+                  src: local('Plex-Hebrew-Semibold'), local('Plex-Hebrew-Semibold'), url('https://res.cloudinary.com/dpgdjfckl/raw/upload/v1632944739/genbank/ibm-plex-hebrew/IBMPlexSansHebrew-SemiBold_jdcpat.woff') format('woff');
+                }
+
+                @font-face {
+                  font-family: 'Plex-Hebrew';
+                  font-style: normal;
+                  font-weight: 600;
+                  src: local('Plex-Hebrew'), local('Plex-Hebrew'), url('https://res.cloudinary.com/dpgdjfckl/raw/upload/v1632944738/genbank/ibm-plex-hebrew/IBMPlexSansHebrew-Regular_ayybed.woff') format('woff');
+                }
+
+                @font-face {
+                  font-family: 'Plex-Serif';
+                  font-style: normal;
+                  font-weight: 600;
+                  src: local('Plex-Serif'), local('Plex-Serif'), url('https://res.cloudinary.com/dpgdjfckl/raw/upload/v1632946014/genbank/ibm-plex-hebrew/IBMPlexSerif-Regular_gymhal.ttf') format('woff');
+                }
+              }
+            </style>
+        </mj-raw>
     </mj-head>
     <mj-body background-color="#F2F5F8">
         <mj-section padding="4% 0 0 0">
             <mj-column padding-left="6%">
-                <mj-image width="100px"
-                          src="https://res.cloudinary.com/dpgdjfckl/image/upload/v1632944736/genbank/logo_cd32l6.png"
-                          align="left" padding-bottom="3.5%"/>
-            </mj-column>
-        </mj-section>
-        <mj-section padding="0 4% 0 4%">
-            <mj-column background-color="white" padding="4%">
-                <mj-text padding-bottom="3.5%" color="#011B49" font-size="11.8%" font-family="Plex-Hebrew-Semibold" line-height="1.5">
-                    Congratulations {first_name}🎉
-                </mj-text>
-                <mj-text padding-bottom="1.8%" color="#000E25" font-size="3.6%" font-family="Plex-Hebrew">
-                    You have been pre-qualified for Genbank.
-                </mj-text>
-                <mj-text padding-bottom="1.8%" color="#000E25" font-size="3.6%" font-family="Plex-Hebrew">
-                    Genbank is a financial technology company that offers banking services to individuals and businesses
-                    in Africa. All banking services will be provided by our partner bank, an FDIC member.
-                </mj-text>
-                <mj-text padding-bottom="1.8%" color="#000E25" font-size="3.6%" font-family="Plex-Hebrew">
-                    Our vision is to be a leading provider of borderless financial solutions.
-                </mj-text>
-                <mj-text padding-bottom="1.8%" color="#000E25" font-size="3.6%" font-family="Plex-Hebrew">
-                    Like you, we are looking forward to the launch of the first American neobank that includes Africans.
-                    You will enjoy rewards for signing up early, and be the first to know when Genbank is available.
-                </mj-text>
-                <mj-text padding-bottom="1.8%" color="#000E25" font-size="3.6%" font-family="Plex-Hebrew">
-                    We are excited and looking forward to serving you.
-                </mj-text>
-                <mj-text padding-bottom="3.6%" color="#000E25" font-size="3.6%" font-family="Plex-Hebrew">
-                    Best regards,
-                </mj-text>
-                <mj-text padding-bottom="0.9%" color="#000E25" font-size="3.6%" font-family="Plex-Serif">
-                    Ayo Allu
-                </mj-text>
-                <mj-text padding-bottom="3.6%" color="#000E25" font-size="3.6%" font-family="Plex-Hebrew">
-                    CEO, Genbank.
-                </mj-text>
-            </mj-column>
-        </mj-section>
-        <mj-section padding="0 4% 0 4%">
-            <mj-column padding="4% 4% 0 4%" background-color="#F7F9FC">
-                <mj-text font-family="Plex-Hebrew" color="#000E25" font-size="14px">
-                    Follow us on social media for regular updates while you wait.
-                </mj-text>
-            </mj-column>
-        </mj-section>
-        <mj-section padding="0 4% 4% 4%" >
-            <mj-column padding-left="4%" background-color="#F7F9FC" border-radius="0px 0px 0px 4px">
-                <mj-image width="100px"
-                          src="https://res.cloudinary.com/dpgdjfckl/image/upload/v1632944736/genbank/logo_cd32l6.png"
-                          align="left" padding-bottom="3.5%"/>
-            </mj-column>
-            <mj-column padding-top="2%" padding-bottom="3%" padding-left="4%" border-radius="0px 0px 4px 0px" background-color="#F7F9FC" vertical-align="center">
                 <mj-raw>
-                    <a href="https://twitter.com/GenbankUS" style="text-decoration: none">
-                        <img src="https://res.cloudinary.com/dpgdjfckl/image/upload/v1633044277/genbank/twitter_eddrld.png" alt="Genbank Twitter" style="padding-left: 5%; padding-right: 3.5%">
-                    </a>
-                    <a href="https://www.instagram.com/genbankus/" style="text-decoration: none">
-                        <img src="https://res.cloudinary.com/dpgdjfckl/image/upload/v1633044277/genbank/instagram_kmkcqc.png" alt="Genbank Instagram" style="padding-right: 3.5%">
-                    </a>
-                    <a href="https://www.linkedin.com/company/genbankus/" style="text-decoration: none">
-                        <img src="https://res.cloudinary.com/dpgdjfckl/image/upload/v1633044066/genbank/linkedin_ofpoxs.png" alt="Genbank LinkedIn">
+                    <a href="https://genbank.us/">
+                        <img alt="Genbank Logo" style="padding-bottom: 24px; width: 100px"
+                             src="https://res.cloudinary.com/dpgdjfckl/image/upload/v1632944736/genbank/logo_cd32l6.png"
+                             align="left" padding="0 35px 0 0"/>
                     </a>
                 </mj-raw>
             </mj-column>
         </mj-section>
+        <mj-section padding="0 4% 0 4%">
+            <mj-column background-color="white" padding="32px 4% 0px 4%">
+                <mj-text padding="0 0 16px 0" color="#011B49" font-size="20px" font-family="Plex-Hebrew-Semibold"
+                         line-height="1.5">
+                    🎉 Congratulations {first_name}
+                </mj-text>
+                <mj-text padding="0 0 8px 0" color="#000E25" font-size="16px" font-family="Plex-Hebrew">
+                    You have been pre-qualified for Genbank.
+                </mj-text>
+                <mj-text padding="0 0 8px 0" color="#000E25" font-size="16px" font-family="Plex-Hebrew">
+                    Genbank is a financial technology company with the first and best-in-class American banking services
+                    for Africans. Our vision is to be a leading provider of borderless financial solutions.
+                </mj-text>
+                <mj-text padding="0 0 8px 0" color="#000E25" font-size="16px" font-family="Plex-Hebrew">
+                    We are currently building and looking forward to serving you. You will be notified once Genbank is
+                    ready for your use.
+                </mj-text>
+                <mj-text padding="0 0 16px 0" color="#000E25" font-size="16px" font-family="Plex-Hebrew">
+                    Best regards,
+                </mj-text>
+                <mj-text padding="0 0 4px 0" color="#000E25" font-size="16px" font-family="Plex-Serif">
+                    Ayo Allu
+                </mj-text>
+                <mj-text padding="0 0 32px 0" color="#000E25" font-size="16px" font-family="Plex-Hebrew">
+                    Chief Executive
+                </mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-section padding="0 4% 0 4%">
+            <mj-column padding="32px 4% 0 4%" background-color="#F7F9FC">
+                <mj-text font-family="Plex-Hebrew" color="#000E25" font-size="14px" padding="0">
+                    Follow us on social media for regular updates while you wait.
+                </mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-wrapper padding="0 4% 30px 4%">
+            <mj-section padding="22px 4% 0 4%" background-color="#F7F9FC">
+                <mj-group>
+                    <mj-column padding-top="0" background-color="#F7F9FC" border-radius="0px 0px 0px 4px">
+                        <mj-raw>
+                            <a href="https://genbank.us/">
+                                <img alt="Genbank Logo" style="padding: 0 35px 0 0; width: 100px"
+                                     src="https://res.cloudinary.com/dpgdjfckl/image/upload/v1632944736/genbank/logo_cd32l6.png"
+                                     align="left" padding="0 35px 0 0"/>
+                            </a>
+                        </mj-raw>
+                    </mj-column>
+                    <mj-column padding-bottom="35px" padding-left="4%" border-radius="0px 0px 4px 0px"
+                               vertical-align="middle">
+                        <mj-raw>
+                            <a href="https://twitter.com/GenbankUS" style="text-decoration: none">
+                                <img src="https://res.cloudinary.com/dpgdjfckl/image/upload/v1633044277/genbank/twitter_eddrld.png"
+                                     alt="Genbank Twitter" style="padding-left: 5%; padding-right: 3.5%">
+                            </a>
+                            <a href="https://www.instagram.com/genbankus/" style="text-decoration: none">
+                                <img src="https://res.cloudinary.com/dpgdjfckl/image/upload/v1633044277/genbank/instagram_kmkcqc.png"
+                                     alt="Genbank Instagram" style="padding-right: 3.5%">
+                            </a>
+                            <a href="https://www.linkedin.com/company/genbankus/" style="text-decoration: none">
+                                <img src="https://res.cloudinary.com/dpgdjfckl/image/upload/v1633044066/genbank/linkedin_ofpoxs.png"
+                                     alt="Genbank LinkedIn">
+                            </a>
+                        </mj-raw>
+                    </mj-column>
+                </mj-group>
+            </mj-section>
+        </mj-wrapper>
     </mj-body>
 </mjml>
