@@ -58,12 +58,20 @@ const Button = ({ children, className, elevated, hasWhiteBackground, onClick, la
 
   if(isLink){
     return (
+      <div className="relative group">
       <Link
         to={to}
         className={derivedClassName}
       >
         {renderContent()}
       </Link>
+      {
+        elevated && (
+          <span
+            className={classNames("absolute w-100% h-100% duration-300 left-0 top-0 transform translate-x-1 translate-y-1 border", colorsClasses.elevation)} />
+        )
+      }
+      </div>
     )
   }
 
