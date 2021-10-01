@@ -34,7 +34,17 @@ exports.template = `
   </style>
   <![endif]-->
 
-  <!--[if !mso]><!-->
+
+  <style type="text/css">
+    @media only screen and (min-width:480px) {
+      .mj-column-per-100 { width:100% !important; max-width: 100%; }
+      .mj-column-per-50 { width:50% !important; max-width: 50%; }
+    }
+  </style>
+  <style media="screen and (min-width:480px)">
+    .moz-text-html .mj-column-per-100 { width:100% !important; max-width: 100%; }
+    .moz-text-html .mj-column-per-50 { width:50% !important; max-width: 50%; }
+  </style>
 
   <style type="text/css">
     @media screen {
@@ -60,21 +70,6 @@ exports.template = `
       }
     }
   </style>
-  <!--<![endif]-->
-
-
-
-  <style type="text/css">
-    @media only screen and (min-width:480px) {
-      .mj-column-per-100 { width:100% !important; max-width: 100%; }
-      .mj-column-per-50 { width:50% !important; max-width: 50%; }
-    }
-  </style>
-  <style media="screen and (min-width:480px)">
-    .moz-text-html .mj-column-per-100 { width:100% !important; max-width: 100%; }
-    .moz-text-html .mj-column-per-50 { width:50% !important; max-width: 50%; }
-  </style>
-
 
   <style type="text/css">
 
@@ -125,7 +120,7 @@ exports.template = `
             >
               <tbody>
               <tr>
-                <td  style="vertical-align:top;padding-left:56px;">
+                <td  style="vertical-align:top;padding-left:6%;">
 
                   <table
                     border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%"
@@ -134,7 +129,7 @@ exports.template = `
 
                     <tr>
                       <td
-                        align="left" style="font-size:0px;padding:10px 25px;padding-bottom:24px;word-break:break-word;"
+                        align="left" style="font-size:0px;padding:10px 25px;padding-bottom:3.5%;word-break:break-word;"
                       >
 
                         <table
@@ -208,23 +203,23 @@ exports.template = `
 
                     <tr>
                       <td
-                        align="left" style="font-size:0px;padding:10px 25px;padding-bottom:24px;word-break:break-word;"
+                        align="left" style="font-size:0px;padding:10px 25px;padding-bottom:3.5%;word-break:break-word;"
                       >
 
                         <div
-                          style="font-family:Plex-Hebrew-Semibold;font-size:18px;line-height:1.5;text-align:left;color:#011B49;"
-                        >Congratulations {first_name}🎉</div>
+                          style="font-family:Plex-Hebrew-Semibold;font-size:11.8%;line-height:1.5;text-align:left;color:#011B49;"
+                        >Congratulations {first_name}ðŸŽ‰</div>
 
                       </td>
                     </tr>
 
                     <tr>
                       <td
-                        align="left" style="font-size:0px;padding:10px 25px;padding-bottom:8px;word-break:break-word;"
+                        align="left" style="font-size:0px;padding:10px 25px;padding-bottom:1.8%;word-break:break-word;"
                       >
 
                         <div
-                          style="font-family:Plex-Hebrew;font-size:16px;line-height:1;text-align:left;color:#000E25;"
+                          style="font-family:Plex-Hebrew;font-size:3.6%;line-height:1;text-align:left;color:#000E25;"
                         >You have been pre-qualified for Genbank.</div>
 
                       </td>
@@ -232,11 +227,11 @@ exports.template = `
 
                     <tr>
                       <td
-                        align="left" style="font-size:0px;padding:10px 25px;padding-bottom:8px;word-break:break-word;"
+                        align="left" style="font-size:0px;padding:10px 25px;padding-bottom:1.8%;word-break:break-word;"
                       >
 
                         <div
-                          style="font-family:Plex-Hebrew;font-size:16px;line-height:1;text-align:left;color:#000E25;"
+                          style="font-family:Plex-Hebrew;font-size:3.6%;line-height:1;text-align:left;color:#000E25;"
                         >Genbank is a financial technology company that offers banking services to individuals and businesses
                           in Africa. All banking services will be provided by our partner bank, an FDIC member.</div>
 
@@ -245,11 +240,11 @@ exports.template = `
 
                     <tr>
                       <td
-                        align="left" style="font-size:0px;padding:10px 25px;padding-bottom:8px;word-break:break-word;"
+                        align="left" style="font-size:0px;padding:10px 25px;padding-bottom:1.8%;word-break:break-word;"
                       >
 
                         <div
-                          style="font-family:Plex-Hebrew;font-size:16px;line-height:1;text-align:left;color:#000E25;"
+                          style="font-family:Plex-Hebrew;font-size:3.6%;line-height:1;text-align:left;color:#000E25;"
                         >Our vision is to be a leading provider of borderless financial solutions.</div>
 
                       </td>
@@ -257,11 +252,11 @@ exports.template = `
 
                     <tr>
                       <td
-                        align="left" style="font-size:0px;padding:10px 25px;padding-bottom:8px;word-break:break-word;"
+                        align="left" style="font-size:0px;padding:10px 25px;padding-bottom:1.8%;word-break:break-word;"
                       >
 
                         <div
-                          style="font-family:Plex-Hebrew;font-size:16px;line-height:1;text-align:left;color:#000E25;"
+                          style="font-family:Plex-Hebrew;font-size:3.6%;line-height:1;text-align:left;color:#000E25;"
                         >Like you, we are looking forward to the launch of the first American neobank that includes Africans.
                           You will enjoy rewards for signing up early, and be the first to know when Genbank is available.</div>
 
@@ -270,11 +265,11 @@ exports.template = `
 
                     <tr>
                       <td
-                        align="left" style="font-size:0px;padding:10px 25px;padding-bottom:8px;word-break:break-word;"
+                        align="left" style="font-size:0px;padding:10px 25px;padding-bottom:1.8%;word-break:break-word;"
                       >
 
                         <div
-                          style="font-family:Plex-Hebrew;font-size:16px;line-height:1;text-align:left;color:#000E25;"
+                          style="font-family:Plex-Hebrew;font-size:3.6%;line-height:1;text-align:left;color:#000E25;"
                         >We are excited and looking forward to serving you.</div>
 
                       </td>
@@ -282,11 +277,11 @@ exports.template = `
 
                     <tr>
                       <td
-                        align="left" style="font-size:0px;padding:10px 25px;padding-bottom:16px;word-break:break-word;"
+                        align="left" style="font-size:0px;padding:10px 25px;padding-bottom:3.6%;word-break:break-word;"
                       >
 
                         <div
-                          style="font-family:Plex-Hebrew;font-size:16px;line-height:1;text-align:left;color:#000E25;"
+                          style="font-family:Plex-Hebrew;font-size:3.6%;line-height:1;text-align:left;color:#000E25;"
                         >Best regards,</div>
 
                       </td>
@@ -294,11 +289,11 @@ exports.template = `
 
                     <tr>
                       <td
-                        align="left" style="font-size:0px;padding:10px 25px;padding-bottom:4px;word-break:break-word;"
+                        align="left" style="font-size:0px;padding:10px 25px;padding-bottom:0.9%;word-break:break-word;"
                       >
 
                         <div
-                          style="font-family:Plex-Serif;font-size:16px;line-height:1;text-align:left;color:#000E25;"
+                          style="font-family:Plex-Serif;font-size:3.6%;line-height:1;text-align:left;color:#000E25;"
                         >Ayo Allu</div>
 
                       </td>
@@ -306,11 +301,11 @@ exports.template = `
 
                     <tr>
                       <td
-                        align="left" style="font-size:0px;padding:10px 25px;padding-bottom:16px;word-break:break-word;"
+                        align="left" style="font-size:0px;padding:10px 25px;padding-bottom:3.6%;word-break:break-word;"
                       >
 
                         <div
-                          style="font-family:Plex-Hebrew;font-size:16px;line-height:1;text-align:left;color:#000E25;"
+                          style="font-family:Plex-Hebrew;font-size:3.6%;line-height:1;text-align:left;color:#000E25;"
                         >CEO, Genbank.</div>
 
                       </td>
@@ -430,7 +425,7 @@ exports.template = `
 
                     <tr>
                       <td
-                        align="left" style="font-size:0px;padding:10px 25px;padding-bottom:24px;word-break:break-word;"
+                        align="left" style="font-size:0px;padding:10px 25px;padding-bottom:3.5%;word-break:break-word;"
                       >
 
                         <table
@@ -473,20 +468,20 @@ exports.template = `
             >
               <tbody>
               <tr>
-                <td  style="background-color:#F7F9FC;border-radius:0px 0px 4px 0px;vertical-align:center;padding-top:10px;padding-bottom:21px;padding-left:4%;">
+                <td  style="background-color:#F7F9FC;border-radius:0px 0px 4px 0px;vertical-align:center;padding-top:2%;padding-bottom:3%;padding-left:4%;">
 
                   <table
                     border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%"
                   >
                     <tbody>
                     <a href="https://twitter.com/GenbankUS" style="text-decoration: none">
-                      <img src="https://res.cloudinary.com/dpgdjfckl/image/upload/v1633044277/genbank/twitter_eddrld.png" alt="Genbank Twitter" style="padding-left: 50px; padding-right: 27px">
+                       <img src="https://res.cloudinary.com/dpgdjfckl/image/upload/v1633044277/genbank/twitter_eddrld.png" alt="Genbank Twitter" style="padding-left: 5%; padding-right: 3.5%">
                     </a>
                     <a href="https://www.instagram.com/genbankus/" style="text-decoration: none">
-                      <img src="https://res.cloudinary.com/dpgdjfckl/image/upload/v1633044277/genbank/instagram_kmkcqc.png" alt="Genbank Instagram" style="padding-right: 27px">
+                      <img src="https://res.cloudinary.com/dpgdjfckl/image/upload/v1633044277/genbank/instagram_kmkcqc.png" alt="Genbank Instagram" style="padding-right: 3.5%">
                     </a>
                     <a href="https://www.linkedin.com/company/genbankus/" style="text-decoration: none">
-                      <img src="https://res.cloudinary.com/dpgdjfckl/image/upload/v1633044066/genbank/linkedin_ofpoxs.png" alt="Genbank LinkedIn">
+                       <img src="https://res.cloudinary.com/dpgdjfckl/image/upload/v1633044066/genbank/linkedin_ofpoxs.png" alt="Genbank LinkedIn">
                     </a>
                     </tbody>
                   </table>
