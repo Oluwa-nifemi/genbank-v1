@@ -4,6 +4,7 @@ const { template } = require('./template')
 var SibApiV3Sdk = require('sib-api-v3-sdk');
 
 exports.handler = async (event) => {
+  console.log(SENDINBLUE_API_KEY)
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method Not Allowed', headers: { 'Allow': 'POST' } }
   }
