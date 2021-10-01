@@ -21,7 +21,7 @@ module.exports = {
       resolve: `gatsby-plugin-sharp`,
       options: {
         defaults: {
-          quality: 90
+          quality: 100
         }
       }
     },

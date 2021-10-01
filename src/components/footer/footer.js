@@ -5,6 +5,7 @@ import AppleStoreIcon from "../../assets/images/apple.inline.svg"
 import ArrowRightAngled from '../../assets/images/arrow-angled-right.inline.svg'
 import './footer.css'
 import { Link } from "gatsby"
+import {  StaticImage } from "gatsby-plugin-image"
 
 const DownloadCard = ({ icon: Icon, topText, destination }) => {
   return (
@@ -28,7 +29,13 @@ const Footer = () => {
       <div className='flex items-start mb-20 flex-wrap lg-max:flex-col lg-max:gap-y-10'>
         <div>
           <Link to='/'>
-            <img src={logoIcon} alt="Logo" />
+          <StaticImage
+            placeholder="none"
+            loading="eager"
+            src="../../assets/images/logo-1.png"
+            alt="Genbank Logo"
+            className="w-28"
+          />
           </Link>
           <p className='text-white font-plex-hebrew text-base mb-10'>
             Bank in US

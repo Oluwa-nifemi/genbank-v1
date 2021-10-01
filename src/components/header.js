@@ -3,12 +3,18 @@ import logoIcon from "../assets/images/logo.png"
 import Button from "./button/button"
 import { Link, navigate } from "gatsby"
 import CloseIcon from '../assets/images/close.inline.svg'
-
+import {  StaticImage } from "gatsby-plugin-image"
 const Header = ({ hasBackButton }) => {
   return (
     <header className='container h-20 flex justify-between items-center bg-blue-1000 bg-opacity-48 fixed z-50 backdrop-filter backdrop-blur-md'>
       <Link to='/'>
-        <img src={logoIcon} alt="Logo" />
+      <StaticImage
+            placeholder="none"
+            loading="eager"
+            src="../assets/images/logo-1.png"
+            alt="Genbank Logo"
+            className="w-28"
+          />
       </Link>
       {
         hasBackButton ? (
