@@ -103,7 +103,7 @@ const PhoneInput = ({ label, id }) => {
 
   return (
     <div>
-      <label className="text-lg text-white font-plex-hebrew mb-3 flex" htmlFor={id}>
+      <label className="text-lg text-white font-plex-hebrew mb-3 flex" htmlFor="phoneNumber">
         {label}
       </label>
       <div className="bg-blue-800 flex items-center px-4 relative md-max:flex-nowrap border border-transparent focus-within:border-blue-200">

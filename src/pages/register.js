@@ -174,12 +174,12 @@ const Register = () => {
                   label="Phone Number"
                   id="number"
                 />
-                <div className='hidden'>
-                  <label htmlFor="phoneNumber">
-                    Phone Number
-                  </label>
-                  <input id="phoneNumber" type="text" value={extractPhoneNumber(formik?.values?.number)}/>
-                </div>
+                <input id="phoneNumber" name="phoneNumber" type="hidden" value={extractPhoneNumber(formik?.values?.number)}/>
+                {/*<div className='hidden'>*/}
+                {/*  <label htmlFor="phoneNumber">*/}
+                {/*    Phone Number*/}
+                {/*  </label>*/}
+                {/*</div>*/}
                 <Input
                   label="Email address"
                   name="email"
