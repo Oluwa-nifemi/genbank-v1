@@ -161,7 +161,7 @@ const Register = () => {
               <div
                 className="grid grid-cols-2 gap-x-8 gap-y-10 mb-10 w-55% lg-max:w-80% md-max:w-100% md-max:px-6 md-max:grid-cols-1 md-max:gap-x-6">
                 <Input
-                  label="First Name"
+                  label="First name"
                   name="first name"
                   id="firstName"
                 />
@@ -171,15 +171,10 @@ const Register = () => {
                   id="lastName"
                 />
                 <PhoneInput
-                  label="Phone Number"
+                  label="Phone number"
                   id="number"
                 />
                 <input id="phoneNumber" name="phoneNumber" type="hidden" value={extractPhoneNumber(formik?.values?.number)}/>
-                {/*<div className='hidden'>*/}
-                {/*  <label htmlFor="phoneNumber">*/}
-                {/*    Phone Number*/}
-                {/*  </label>*/}
-                {/*</div>*/}
                 <Input
                   label="Email address"
                   name="email"
