@@ -16,7 +16,8 @@ import { postData, sendEmail } from "../api/api"
 import { Formik } from "formik"
 import * as Yup from "yup"
 import { isValidPhoneNumber } from "libphonenumber-js"
-import { toast } from "react-toastify"
+import { toast, ToastContainer } from "react-toastify"
+import 'react-toastify/dist/ReactToastify.css'
 import { classNames } from "../util/functions"
 
 const defaultOptions = {
@@ -111,7 +112,7 @@ const Register = () => {
     } catch (e) {
       setFormState(formStates.IDLE)
       toast.error(
-        "Something went wrong while submitting the form. Kindly check your internet connection and try again"
+        <span className='text-red'>Something went wrong while submitting the form. Kindly check your internet connection and try again</span>
       )
     }
   }
@@ -204,6 +205,7 @@ const Register = () => {
                   Submit
                 </Button>
               </div>
+              <ToastContainer/>
             </>
           )
         }
