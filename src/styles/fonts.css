@@ -2,6 +2,7 @@
     font-family: "IBM Plex Serif";
     font-weight: 500;
     src: url(../assets/fonts/ibm-plex-serif/IBMPlexSerif-Medium.woff);
+    font-display: swap;
 }
 
 @font-face {
@@ -9,22 +10,26 @@
     font-weight: 500;
     font-style: italic;
     src: url(../assets/fonts/ibm-plex-serif/IBMPlexSerif-MediumItalic.woff);
+    font-display: swap;
 }
 
 @font-face {
     font-family: "IBM Plex Serif";
     font-weight: 400;
     src: url(../assets/fonts/ibm-plex-serif/IBMPlexSerif-Regular.woff);
+    font-display: swap;
 }
 
 @font-face {
     font-family: "IBM Plex Hebrew";
     font-weight: 300;
     src: url(../assets/fonts/ibm-plex-hebrew/IBMPlexSansHebrew-ExtraLight.woff);
+    font-display: swap;
 }
 
 @font-face {
     font-family: "IBM Plex Hebrew";
     font-weight: 400;
     src: url(../assets/fonts/ibm-plex-hebrew/IBMPlexSansHebrew-Regular.woff);
+    font-display: swap;
 }
