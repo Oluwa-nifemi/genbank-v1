@@ -25,7 +25,6 @@ exports.handler = async (event) => {
   sendSmtpEmail.subject = "Welcome to Genbank!"
   sendSmtpEmail.templateId = 1
   sendSmtpEmail.params = {FIRSTNAME: data.firstName }
-  sendSmtpEmail.params
 
   return new Promise((resolve) => {
     apiInstance.sendTransacEmail(sendSmtpEmail).then(function(data) {
