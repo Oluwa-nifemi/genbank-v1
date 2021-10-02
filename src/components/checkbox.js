@@ -45,11 +45,12 @@ const Checkbox = (
         )}
       />
       {label && (
-        <span
-          className="text-white ml-5 text-base font-plex-hebrew"
+        <button
+          className="text-white ml-5 text-base font-plex-hebrew bg-transparent border-none"
+          onClick={onChange}
         >
           {label}
-        </span>
+        </button>
       )}
     </div>
   )

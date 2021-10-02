@@ -17,7 +17,7 @@ import { Formik } from "formik"
 import * as Yup from "yup"
 import { isValidPhoneNumber } from "libphonenumber-js"
 import { toast, ToastContainer } from "react-toastify"
-import 'react-toastify/dist/ReactToastify.css'
+import "react-toastify/dist/ReactToastify.css"
 import { classNames } from "../util/functions"
 
 const defaultOptions = {
@@ -112,7 +112,7 @@ const Register = () => {
     } catch (e) {
       setFormState(formStates.IDLE)
       toast.error(
-        <span className='text-red'>Something went wrong while submitting the form. Kindly check your internet connection and try again</span>
+        <span className="text-red">Something went wrong while submitting the form. Kindly check your internet connection and try again</span>
       )
     }
   }
@@ -184,9 +184,10 @@ const Register = () => {
                   name="Agree"
                   label={
                     <>
-                      By signing up, I agree to Genbank Financial, LLC’s <Link to="/register#disclaimer"
-                                                                               className="hover:text-blue-300 duration-300 font-bold">Terms
-                      and Conditions.</Link>
+                      By signing up, I agree to Genbank Financial, LLC’s
+                      <Link
+                        to="/register#disclaimer"
+                        className="hover:text-blue-300 duration-300 font-bold"> Terms and Conditions.</Link>
                     </>
                   }
                 />
@@ -205,7 +206,7 @@ const Register = () => {
                   Submit
                 </Button>
               </div>
-              <ToastContainer/>
+              <ToastContainer />
             </>
           )
         }
