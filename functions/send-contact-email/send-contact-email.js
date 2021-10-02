@@ -21,7 +21,7 @@ exports.handler = async (event) => {
   const sendSmtpEmail = new SibApiV3Sdk.SendSmtpEmail()
 
   sendSmtpEmail.to = [{ "email": data.targetEmail, "name": data.firstName }]
-  sendSmtpEmail.sender = { "email": "electronic@genbank.us", "name": "Genbank" }
+  sendSmtpEmail.sender = { "email": "donotreply@genbank.us", "name": "Genbank" }
   sendSmtpEmail.subject = "Welcome to Genbank!"
   sendSmtpEmail.templateId = 1
   sendSmtpEmail.params = {FIRSTNAME: data.firstName }
