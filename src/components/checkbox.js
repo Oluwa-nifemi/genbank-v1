@@ -48,6 +48,7 @@ const Checkbox = (
         <button
           className="text-white ml-5 text-base font-plex-hebrew bg-transparent border-none"
           onClick={onChange}
+          type='button'
         >
           {label}
         </button>

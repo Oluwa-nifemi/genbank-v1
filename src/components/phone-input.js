@@ -11,6 +11,7 @@ const Option = ({ children, onClick, flag: Flag }) => (
   <button
     className="w-100% flex items-center py-3 outline-none bg-blue-600 gap-x-3 px-2 duration-150 hover:bg-blue-700"
     onClick={onClick}
+    type='button'
   >
     <Flag className="flex-shrink-0 w-6" />
     <span className="text-sm font-plex-hebrew text-white">
@@ -34,7 +35,7 @@ const CountryDropdown = ({ value, onChange }) => {
 
   return (
     <div className="h-100% flex-shrink-0">
-      <button onClick={toggleShowOptions} className="flex items-center gap-x-2.5 h-100%">
+      <button type='button' onClick={toggleShowOptions} className="flex items-center gap-x-2.5 h-100%">
         <Flag className="flex-shrink-0 w-8" />
         <span className="text-lg font-plex-hebrew text-white">
             {value.ISO}
