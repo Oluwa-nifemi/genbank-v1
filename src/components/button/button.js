@@ -1,42 +1,54 @@
 import React from "react"
 import ArrowRight from "../../assets/images/arrow-right.inline.svg"
 import { classNames } from "../../util/functions"
-import './button.scss'
+import "./button.scss"
 import { PulseLoader } from "react-spinners"
 import Link from "gatsby-link"
 
-const getElevationClass = ({hasWhiteBackground, isDisabled}) => {
-  if(isDisabled) {
-    return 'border-blue-800 '
+const getElevationClass = ({ hasWhiteBackground, isDisabled }) => {
+  if (isDisabled) {
+    return "border-blue-800 "
   }
 
-  if(hasWhiteBackground){
+  if (hasWhiteBackground) {
     return "border-white"
   }
 
   return "border-blue-400 group-hover:border-white"
 }
 
-const Button = ({ children, className, elevated, hasWhiteBackground, onClick, largeButton = true, loading, disabled, isLink, to, type }) => {
+const Button = ({
+                  children,
+                  className,
+                  elevated,
+                  hasWhiteBackground,
+                  onClick,
+                  largeButton = true,
+                  loading,
+                  disabled,
+                  isLink,
+                  to,
+                  type
+                }) => {
   const colorsClasses = {
     button: hasWhiteBackground ? "text-blue-400 bg-white white-button" : "text-blue-100 bg-blue-400",
     arrow: hasWhiteBackground ? "text-blue-400" : "text-white",
-    elevation: getElevationClass({hasWhiteBackground, isDisabled: disabled})
+    elevation: getElevationClass({ hasWhiteBackground, isDisabled: disabled })
   }
 
   const renderContent = () => {
-    if(loading){
+    if (loading) {
       return (
-        <PulseLoader size={10} color='#02BBDC'/>
+        <PulseLoader size={10} color="#02BBDC" />
       )
     }
 
     return (
-      <span className='text-wrapper'>
+      <span className="text-wrapper">
           <span className={
             classNames(
               largeButton ? "text-description" : "text-base md-max:text-sm leading-5 h-5",
-              'text'
+              "text"
             )
           }>
             {children}
@@ -56,21 +68,21 @@ const Button = ({ children, className, elevated, hasWhiteBackground, onClick, la
     className
   )
 
-  if(isLink){
+  if (isLink) {
     return (
       <div className="relative group">
-      <Link
-        to={to}
-        className={derivedClassName}
-      >
-        {renderContent()}
-      </Link>
-      {
-        elevated && (
-          <span
-            className={classNames("absolute w-100% h-100% duration-300 left-0 top-0 transform translate-x-1 translate-y-1 border", colorsClasses.elevation)} />
-        )
-      }
+        <Link
+          to={to}
+          className={derivedClassName}
+        >
+          {renderContent()}
+        </Link>
+        {
+          elevated && (
+            <span
+              className={classNames("absolute w-100% h-100% duration-300 left-0 top-0 transform translate-x-1 translate-y-1 border", colorsClasses.elevation)} />
+          )
+        }
       </div>
     )
   }

@@ -29,10 +29,10 @@ const defaultOptions = {
 }
 
 const formStates = Object.freeze({
-  IDLE: 'IDLE',
-  LOADING: 'LOADING',
-  SUCCESS: 'SUCCESS'
-});
+  IDLE: "IDLE",
+  LOADING: "LOADING",
+  SUCCESS: "SUCCESS"
+})
 
 const initialFormValues = {
   firstName: "",
@@ -55,51 +55,51 @@ const formValidationSchema = Yup.object(
         .test(
           "check valid number",
           "Kindly input a valid phone number",
-          function (value) {
-            if(!this.parent.country) return true
+          function(value) {
+            if (!this.parent.country) return true
 
-            if(!value) return false
-            const countryCode = this.parent.country.countryCode;
+            if (!value) return false
+            const countryCode = this.parent.country.countryCode
 
             return isValidPhoneNumber(value, countryCode)
-        })
+          })
     })
   }
 )
 
 const extractPhoneNumber = ({ country, number }) => {
-  let phoneNumber = ''
+  let phoneNumber = ""
   phoneNumber += country.ISO.slice(1) //To remove the plus sign
-  const numberWithoutSpace = number.split(' ').join('')
-  phoneNumber += numberWithoutSpace.replace(country.ISO, '') //In case the user types in their ISO with the normal number
+  const numberWithoutSpace = number.split(" ").join("")
+  phoneNumber += numberWithoutSpace.replace(country.ISO, "") //In case the user types in their ISO with the normal number
 
   return phoneNumber
 }
 
 const Register = () => {
   const [agree, setAgree] = useState(false)
-  const [formState, setFormState] = useState(formStates.IDLE);
+  const [formState, setFormState] = useState(formStates.IDLE)
 
-  const isLoading = formState === formStates.LOADING;
-  const isSuccess = formState === formStates.SUCCESS;
+  const isLoading = formState === formStates.LOADING
+  const isSuccess = formState === formStates.SUCCESS
 
   const toggleAgree = () => {
     setAgree(prevState => !prevState)
   }
 
   const onSubmit = async (formValues) => {
-    if(!agree) return //In case they toy with dev tools
+    if (!agree) return //In case they toy with dev tools
 
     setFormState(formStates.LOADING)
-    try{
-      const formData = {...formValues};
+    try {
+      const formData = { ...formValues }
       formData.number = extractPhoneNumber(formValues.number)
 
       await postData(formData)
 
       await sendEmail({
         firstName: formData.firstName,
-        targetEmail: formData.email,
+        targetEmail: formData.email
       })
 
       setFormState(formStates.SUCCESS)
@@ -108,7 +108,7 @@ const Register = () => {
         top: 0,
         left: 0
       })
-    }catch (e) {
+    } catch (e) {
       setFormState(formStates.IDLE)
       toast.error(
         "Something went wrong while submitting the form. Kindly check your internet connection and try again"
@@ -119,17 +119,18 @@ const Register = () => {
   const renderSuccess = () => {
     return (
       <div className="flex items-center flex-col">
-        <div className='w-94.5 md-max:max-w-67.5 md-max:w-100%'>
+        <div className="w-94.5 md-max:max-w-67.5 md-max:w-100%">
           <Lottie
             options={defaultOptions}
-            height={'100%'}
-            width={'100%'}
+            height={"100%"}
+            width={"100%"}
           />
         </div>
         <h3 className="formHeader font-plex-hebrew text-white mb-4 relative md-max:-top-6">
           Congratulations!
         </h3>
-        <p className="text-xl md:text-base font-plex-hebrew text-white text-center relative md-max:-top-6 md-max:px-6 mx-auto">
+        <p
+          className="text-xl md:text-base font-plex-hebrew text-white text-center relative md-max:-top-6 md-max:px-6 mx-auto">
           You are prequalified and have been signed up for early access.
         </p>
       </div>
@@ -149,7 +150,7 @@ const Register = () => {
               <h1 className="formHeader text-white font-plex-serif mb-4">
                 Sign up to be prequalified
               </h1>
-              <p className='mb-12 text-xl font-plex-hebrew text-white md-max:text-base'>
+              <p className="mb-12 text-xl font-plex-hebrew text-white md-max:text-base">
                 Get early access
               </p>
               <div
@@ -182,7 +183,9 @@ const Register = () => {
                   name="Agree"
                   label={
                     <>
-                      By signing up, I agree to Genbank Financial, LLC’s <Link to='/register#disclaimer' className='hover:text-blue-300 duration-300 font-bold'>Terms and Conditions.</Link>
+                      By signing up, I agree to Genbank Financial, LLC’s <Link to="/register#disclaimer"
+                                                                               className="hover:text-blue-300 duration-300 font-bold">Terms
+                      and Conditions.</Link>
                     </>
                   }
                 />
@@ -210,7 +213,7 @@ const Register = () => {
 
   return (
     <>
-      <Seo title='Genbank | Prequalify'/>
+      <Seo title="Genbank | Prequalify" />
       <Header hasBackButton />
       <main className="relative overflow-hidden pb-56 md-max:pb-40 pt-20">
         <div className="absolute w-full top-20 left-0 pointer-events-none md-max:hidden">
@@ -221,7 +224,8 @@ const Register = () => {
             alt="Background pattern"
           />
         </div>
-        <section className={classNames("flex flex-col items-center", formState !== formStates.SUCCESS && 'pt-28 md-max:pt-12')}>
+        <section
+          className={classNames("flex flex-col items-center", formState !== formStates.SUCCESS && "pt-28 md-max:pt-12")}>
           {isSuccess ? renderSuccess() : renderForm()}
         </section>
       </main>
