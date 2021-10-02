@@ -3,9 +3,25 @@ module.exports = {
     title: `Genbank`,
     description: `Open US Bank accounts from Nigeria or South Africa`,
     author: `@oluwa-nifemi`,
-    siteUrl: `https://genbank-v1.netlify.app/`, //TODO: Rename on deploy
+    siteUrl: `https://genbank.us/`, //TODO: Rename on deploy
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          "G-PXW63FZLLE"
+        ],
+        gtagConfig: {
+          anonymize_ip: true,
+        },
+        // This object is used for configuration specific to this plugin
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: true,
+        },
+      }
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sass`,
