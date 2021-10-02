@@ -147,7 +147,11 @@ const Register = () => {
       >
         {
           formik => (
-            <>
+            <form
+              data-netlify="true"
+              name="Register"
+              className="w-100% mx-auto flex flex-col items-center"
+            >
               <h1 className="formHeader text-white font-plex-serif mb-4">
                 Sign up to be prequalified
               </h1>
@@ -207,7 +211,7 @@ const Register = () => {
                 </Button>
               </div>
               <ToastContainer />
-            </>
+            </form>
           )
         }
       </Formik>
