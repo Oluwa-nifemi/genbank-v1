@@ -12,7 +12,7 @@ export const postData = async (formData) => {
     const formDataSearchParams = new URLSearchParams();
     formDataSearchParams.set("firstName", formData.firstName)
     formDataSearchParams.set("lastName", formData.lastName)
-    formDataSearchParams.set("number", formData.number)
+    formDataSearchParams.set("phoneNumber", formData.number)
     formDataSearchParams.set("email", formData.email)
     formDataSearchParams.set("form-name", "Register")
 
