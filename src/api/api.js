@@ -10,10 +10,10 @@ export const postData = async (formData) => {
     )
   }else{
     const formDataSearchParams = new URLSearchParams();
-    formDataSearchParams.set("First Name", formData.firstName)
-    formDataSearchParams.set("Last Name", formData.lastName)
-    formDataSearchParams.set("Phone Number", formData.number)
-    formDataSearchParams.set("Email", formData.email)
+    formDataSearchParams.set("firstName", formData.firstName)
+    formDataSearchParams.set("lastName", formData.lastName)
+    formDataSearchParams.set("number", formData.number)
+    formDataSearchParams.set("email", formData.email)
     formDataSearchParams.set("form-name", "Register")
 
     await axios.post(
