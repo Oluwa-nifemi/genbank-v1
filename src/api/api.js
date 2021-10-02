@@ -9,14 +9,20 @@ export const postData = async (formData) => {
       }
     )
   }else{
+    const formData = new URLSearchParams();
+    formData.set("First Name", formData.firstName)
+    formData.set("Last Name", formData.lastName)
+    formData.set("Phone Number", formData.number)
+    formData.set("Email", formData.email)
+    formData.set("form-name", "Register")
+
     await axios.post(
       '/',
+      formData.toString(),
       {
-        "form-name": "Register",
-        "First Name": formData.firstName,
-        "Last Name": formData.lastName,
-        "Phone Number": formData.number,
-        "Email": formData.email
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        }
       }
     )
   }
