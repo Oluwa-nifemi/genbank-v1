@@ -6,22 +6,6 @@ module.exports = {
     siteUrl: `https://genbank.us/`, //TODO: Rename on deploy
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-google-gtag`,
-      options: {
-        trackingIds: [
-          "G-PXW63FZLLE"
-        ],
-        gtagConfig: {
-          anonymize_ip: true,
-        },
-        // This object is used for configuration specific to this plugin
-        pluginConfig: {
-          // Puts tracking script in the head instead of the body
-          head: true,
-        },
-      }
-    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sass`,
