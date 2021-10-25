@@ -19,6 +19,7 @@ import { isValidPhoneNumber } from "libphonenumber-js"
 import { toast, ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import { classNames } from "../util/functions"
+import ArrowRight from "../assets/images/arrow-right-small.inline.svg"
 
 const defaultOptions = {
   loop: false,
@@ -134,6 +135,17 @@ const Register = () => {
           className="text-xl md:text-base font-plex-hebrew text-white text-center relative md-max:-top-6 md-max:px-6 mx-auto">
           You are prequalified and have been signed up for early access.
         </p>
+        <a
+          href="https://ptwwsqk30wi.typeform.com/to/scqccxDd"
+          target='_blank'
+          className='mt-4 flex no-underline text-white text-base md:text-lg font-plex-hebrew gap-x-4 items-baseline'
+          rel='noreferrer'
+        >
+          <span className='underline'>
+            Kindly take this 2-minute survey
+          </span>
+          <ArrowRight />
+        </a>
       </div>
     )
   }
