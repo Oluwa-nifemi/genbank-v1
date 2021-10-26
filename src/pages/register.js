@@ -136,7 +136,7 @@ const Register = () => {
           You are prequalified and have been signed up for early access.
         </p>
         <a
-          href="https://ptwwsqk30wi.typeform.com/to/scqccxDd"
+          href="https://forms.gle/xbsgCDthtrqqbih99"
           target='_blank'
           className='mt-4 flex no-underline text-white text-base md:text-lg font-plex-hebrew gap-x-4 items-baseline'
           rel='noreferrer'
