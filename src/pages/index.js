@@ -211,7 +211,7 @@ const IndexPage = () => {
         <section className="pt-28 container flex flex-col items-center first-section md-max:pt-12 relative">
           <h1
             className="font-plex-serif text-hero font-medium mb-6 w-246 text-white text-center md-max:text-hero-mobile md-max:w-100% md-max:mb-10">
-            OPEN AMERICAN BANK ACCOUNTS FROM <Typewriter />
+            OPEN AMERICAN BANK ACCOUNTS FROM <span className='text-blue-200 italic capitalize'>Africa</span>
           </h1>
           <h3
             className="font-plex-hebrew text-description mb-12 text-white w-146 text-center md-max:w-100% md-max:text-base">
